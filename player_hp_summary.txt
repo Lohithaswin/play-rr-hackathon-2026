@@ -1,0 +1,247 @@
+===============================================================================================
+  RAJASTHAN ROYALS HIGH-PERFORMANCE ANALYTICS STUDIO — THE HALLA BOL PRESSURE INDEX
+  (Substantive Volume Standard >= 500 Balls, Strict Flaw Accountability, Pure ML Impact)
+===============================================================================================
+
+===============================================================================================
+  TOP 10 BATTERS UNDER PRESSURE (2022-2026)
+===============================================================================================
+
+#1 DAVID MILLER — Clutch Score: 80.2/100
+   Matches: 81 | Total Balls: 1276 | Pressure Consistency: 67.6%
+   Counter-Attack WPA: +42.27 | Rescue WPA: +14.28 | Death-Alive Chase WPA: +17.65
+   High Pressure ML Runs Added: -78.5 | Pressure Strike Rate: 160.5
+   Fair Deductions: 0.0 (CLEAN)
+   Signature High-Pressure Match Inning Logs:
+     * [2026-05-11] vs Punjab Kings (IPL 2026) — 51 runs off 28 balls (SR 182.1), HP WPA: +12.78 [WON]
+     * [2022-04-17] vs Chennai Super Kings (IPL 2022) — 94 runs off 51 balls (SR 184.3), HP WPA: +7.28 [WON]
+     * [2026-05-24] vs Kolkata Knight Riders (IPL 2026) — 28 runs off 19 balls (SR 147.4), HP WPA: +4.99 [WON]
+
+#2 SURYAKUMAR YADAV — Clutch Score: 74.0/100
+   Matches: 137 | Total Balls: 2716 | Pressure Consistency: 70.5%
+   Counter-Attack WPA: +29.37 | Rescue WPA: +20.12 | Death-Alive Chase WPA: +1.72
+   High Pressure ML Runs Added: +234.4 | Pressure Strike Rate: 186.8
+   Fair Deductions: 0.0 (CLEAN)
+   Signature High-Pressure Match Inning Logs:
+     * [2023-05-24] vs Lucknow Super Giants (IPL 2023) — 33 runs off 20 balls (SR 165.0), HP WPA: +5.23 [WON]
+     * [2023-05-12] vs Gujarat Titans (IPL 2023) — 103 runs off 49 balls (SR 210.2), HP WPA: +3.89 [WON]
+     * [2023-11-23] vs Australia (Australia in India T20I Series 2023) — 80 runs off 42 balls (SR 190.5), HP WPA: +2.12 [WON]
+
+#3 NAMBOORI TILAK VARMA — Clutch Score: 63.7/100
+   Matches: 125 | Total Balls: 2488 | Pressure Consistency: 57.7%
+   Counter-Attack WPA: +23.53 | Rescue WPA: +21.46 | Death-Alive Chase WPA: +7.65
+   High Pressure ML Runs Added: +74.7 | Pressure Strike Rate: 164.1
+   Fair Deductions: 0.0 (CLEAN)
+   Signature High-Pressure Match Inning Logs:
+     * [2023-05-24] vs Lucknow Super Giants (IPL 2023) — 26 runs off 22 balls (SR 118.2), HP WPA: +16.57 [WON]
+     * [2025-01-25] vs England (England in India T20I Series 2025) — 72 runs off 55 balls (SR 130.9), HP WPA: +7.00 [WON]
+     * [2026-04-20] vs Gujarat Titans (IPL 2026) — 101 runs off 45 balls (SR 224.4), HP WPA: +3.42 [WON]
+
+#4 HEINRICH KLAASEN — Clutch Score: 61.6/100
+   Matches: 72 | Total Balls: 1410 | Pressure Consistency: 69.2%
+   Counter-Attack WPA: +31.61 | Rescue WPA: +24.84 | Death-Alive Chase WPA: -1.02
+   High Pressure ML Runs Added: +102.5 | Pressure Strike Rate: 204.1
+   Fair Deductions: -3.0
+   Signature High-Pressure Match Inning Logs:
+     * [2024-05-24] vs Rajasthan Royals (IPL 2024) — 50 runs off 34 balls (SR 147.1), HP WPA: +28.59 [WON]
+     * [2024-05-02] vs Rajasthan Royals (IPL 2024) — 42 runs off 19 balls (SR 221.1), HP WPA: +1.32 [WON]
+     * [2023-04-29] vs Delhi Capitals (IPL 2023) — 53 runs off 27 balls (SR 196.3), HP WPA: +0.99 [WON]
+
+#5 GLENN PHILLIPS — Clutch Score: 60.6/100
+   Matches: 54 | Total Balls: 1045 | Pressure Consistency: 69.0%
+   Counter-Attack WPA: +23.85 | Rescue WPA: +18.48 | Death-Alive Chase WPA: +13.26
+   High Pressure ML Runs Added: +23.5 | Pressure Strike Rate: 151.2
+   Fair Deductions: 0.0 (CLEAN)
+   Signature High-Pressure Match Inning Logs:
+     * [2023-05-07] vs Rajasthan Royals (IPL 2023) — 25 runs off 7 balls (SR 357.1), HP WPA: +12.47 [WON]
+     * [2026-10-30] vs India (India in New Zealand T20I Series 2026) — 107 runs off 49 balls (SR 218.4), HP WPA: +3.80 [WON]
+     * [2022-07-18] vs Ireland (New Zealand in Ireland T20I Series 2022) — 69 runs off 52 balls (SR 132.7), HP WPA: +2.01 [WON]
+
+#6 SHIMRON HETMYER — Clutch Score: 59.0/100
+   Matches: 94 | Total Balls: 1240 | Pressure Consistency: 58.3%
+   Counter-Attack WPA: +21.95 | Rescue WPA: +16.96 | Death-Alive Chase WPA: +10.20
+   High Pressure ML Runs Added: -11.9 | Pressure Strike Rate: 169.6
+   Fair Deductions: 0.0 (CLEAN)
+   Signature High-Pressure Match Inning Logs:
+     * [2024-04-13] vs Punjab Kings (IPL 2024) — 27 runs off 10 balls (SR 270.0), HP WPA: +15.61 [WON]
+     * [2022-03-29] vs Sunrisers Hyderabad (IPL 2022) — 32 runs off 13 balls (SR 246.2), HP WPA: +1.73 [WON]
+     * [2025-04-05] vs Punjab Kings (IPL 2025) — 20 runs off 12 balls (SR 166.7), HP WPA: +1.39 [WON]
+
+#7 HARDIK PANDYA — Clutch Score: 55.7/100
+   Matches: 117 | Total Balls: 1902 | Pressure Consistency: 67.3%
+   Counter-Attack WPA: +31.86 | Rescue WPA: +6.47 | Death-Alive Chase WPA: +8.63
+   High Pressure ML Runs Added: -66.9 | Pressure Strike Rate: 157.5
+   Fair Deductions: 0.0 (CLEAN)
+   Signature High-Pressure Match Inning Logs:
+     * [2025-05-01] vs Rajasthan Royals (IPL 2025) — 48 runs off 23 balls (SR 208.7), HP WPA: +3.01 [WON]
+     * [2026-04-29] vs Sunrisers Hyderabad (IPL 2026) — 31 runs off 15 balls (SR 206.7), HP WPA: +0.87 [LOST]
+     * [2025-12-09] vs South Africa (South Africa in India T20I Series 2025) — 59 runs off 28 balls (SR 210.7), HP WPA: +0.86 [WON]
+
+#8 VIRAT KOHLI — Clutch Score: 47.5/100
+   Matches: 92 | Total Balls: 2455 | Pressure Consistency: 69.1%
+   Counter-Attack WPA: +35.50 | Rescue WPA: +1.27 | Death-Alive Chase WPA: +0.00
+   High Pressure ML Runs Added: -24.1 | Pressure Strike Rate: 152.4
+   Fair Deductions: 0.0 (CLEAN)
+   Signature High-Pressure Match Inning Logs:
+     * [2025-05-27] vs Lucknow Super Giants (IPL 2025) — 54 runs off 30 balls (SR 180.0), HP WPA: +9.16 [WON]
+     * [2022-09-25] vs Australia (Australia in India T20I Series 2022) — 63 runs off 48 balls (SR 131.2), HP WPA: +7.96 [WON]
+     * [2022-09-08] vs Afghanistan (Mens Twenty20 Asia Cup 2022) — 122 runs off 61 balls (SR 200.0), HP WPA: +2.06 [WON]
+
+#9 NICHOLAS POORAN — Clutch Score: 46.2/100
+   Matches: 114 | Total Balls: 1938 | Pressure Consistency: 74.5%
+   Counter-Attack WPA: +25.49 | Rescue WPA: +6.29 | Death-Alive Chase WPA: +1.91
+   High Pressure ML Runs Added: +95.4 | Pressure Strike Rate: 188.6
+   Fair Deductions: 0.0 (CLEAN)
+   Signature High-Pressure Match Inning Logs:
+     * [2023-04-10] vs Royal Challengers Bengaluru (IPL 2023) — 62 runs off 19 balls (SR 326.3), HP WPA: +2.73 [WON]
+     * [2024-04-02] vs Royal Challengers Bengaluru (IPL 2024) — 40 runs off 21 balls (SR 190.5), HP WPA: +2.02 [WON]
+     * [2025-03-27] vs Sunrisers Hyderabad (IPL 2025) — 70 runs off 26 balls (SR 269.2), HP WPA: +1.22 [WON]
+
+#10 VENKATESH IYER — Clutch Score: 45.4/100
+   Matches: 55 | Total Balls: 942 | Pressure Consistency: 66.7%
+   Counter-Attack WPA: +23.56 | Rescue WPA: +3.71 | Death-Alive Chase WPA: +0.48
+   High Pressure ML Runs Added: +34.7 | Pressure Strike Rate: 181.8
+   Fair Deductions: 0.0 (CLEAN)
+   Signature High-Pressure Match Inning Logs:
+     * [2023-04-09] vs Gujarat Titans (IPL 2023) — 83 runs off 40 balls (SR 207.5), HP WPA: +2.73 [WON]
+     * [2022-02-20] vs West Indies (West Indies in India T20I Series 2022) — 35 runs off 19 balls (SR 184.2), HP WPA: +2.45 [WON]
+     * [2022-02-18] vs West Indies (West Indies in India T20I Series 2022) — 33 runs off 18 balls (SR 183.3), HP WPA: +1.48 [WON]
+
+===============================================================================================
+  TOP 10 BOWLERS UNDER PRESSURE (2022-2026)
+  (Opponent-Quality Calibrated: Minnow Inflation Discounted, Death Leakage Strictly Penalized)
+===============================================================================================
+
+#1 JASPRIT BUMRAH (PACE) — Clutch Score: 78.5/100
+   Matches: 75 | Pressure Consistency Rate: 64.4% | Minnow Ratio: 3.9%
+   High RR Momentum-Breaking Dots in Wins: 102 | Key/Berserk Clutch Wickets in Wins: 29.8
+   Multi-Phase Runs Saved: PP: +18.0 | Mid: +74.5 | Death: +149.8
+   Death Yorkers Executed: 91 | Pressure Economy: 7.36 | Alive HP WPA: +5.37
+   Fair Deductions: 0.0 (CLEAN)
+   Signature High-Pressure Match Bowling Logs:
+     * [2024-04-11] vs Royal Challengers Bengaluru (IPL 2024) — 5/22 (24b, HP Eco: 4.20), HP WPA: +3.91 [WON]
+     * [2024-03-24] vs Gujarat Titans (IPL 2024) — 3/15 (24b, HP Eco: 4.36), HP WPA: +3.13 [LOST]
+     * [2022-05-21] vs Delhi Capitals (IPL 2022) — 3/25 (24b, HP Eco: 7.41), HP WPA: +2.27 [WON]
+
+#2 SUNIL NARINE (SPIN) — Clutch Score: 52.4/100
+   Matches: 66 | Pressure Consistency Rate: 63.0% | Minnow Ratio: 0.0%
+   High RR Momentum-Breaking Dots in Wins: 74 | Key/Berserk Clutch Wickets in Wins: 18.0
+   Multi-Phase Runs Saved: PP: +20.2 | Mid: +80.2 | Death: +23.6
+   Death Yorkers Executed: 0 | Pressure Economy: 7.88 | Alive HP WPA: +16.45
+   Fair Deductions: 0.0 (CLEAN)
+   Signature High-Pressure Match Bowling Logs:
+     * [2022-05-09] vs Mumbai Indians (IPL 2022) — 0/21 (24b, HP Eco: 2.00), HP WPA: +5.55 [WON]
+     * [2026-04-09] vs Lucknow Super Giants (IPL 2026) — 1/13 (24b, HP Eco: 3.60), HP WPA: +1.68 [LOST]
+     * [2023-04-06] vs Royal Challengers Bengaluru (IPL 2023) — 2/20 (24b, HP Eco: 2.73), HP WPA: +0.73 [WON]
+
+#3 JOSH HAZLEWOOD (PACE) — Clutch Score: 52.1/100
+   Matches: 63 | Pressure Consistency Rate: 65.1% | Minnow Ratio: 0.0%
+   High RR Momentum-Breaking Dots in Wins: 136 | Key/Berserk Clutch Wickets in Wins: 44.5
+   Multi-Phase Runs Saved: PP: +48.4 | Mid: -3.8 | Death: +9.1
+   Death Yorkers Executed: 39 | Pressure Economy: 8.47 | Alive HP WPA: +59.27
+   Fair Deductions: -3.0
+   Signature High-Pressure Match Bowling Logs:
+     * [2025-04-24] vs Rajasthan Royals (IPL 2025) — 4/32 (24b, HP Eco: 7.20), HP WPA: +14.31 [WON]
+     * [2026-05-10] vs Mumbai Indians (IPL 2026) — 1/35 (24b, HP Eco: 4.80), HP WPA: +3.78 [WON]
+     * [2025-04-07] vs Mumbai Indians (IPL 2025) — 2/36 (24b, HP Eco: 0.00), HP WPA: +3.00 [WON]
+
+#4 MUSTAFIZUR RAHMAN (PACE) — Clutch Score: 45.3/100
+   Matches: 70 | Pressure Consistency Rate: 63.8% | Minnow Ratio: 20.7%
+   High RR Momentum-Breaking Dots in Wins: 112 | Key/Berserk Clutch Wickets in Wins: 36.0
+   Multi-Phase Runs Saved: PP: +21.9 | Mid: +18.3 | Death: +84.8
+   Death Yorkers Executed: 40 | Pressure Economy: 8.40 | Alive HP WPA: +13.41
+   Fair Deductions: 0.0 (CLEAN)
+   Signature High-Pressure Match Bowling Logs:
+     * [2023-07-16] vs Afghanistan (Afghanistan in Bangladesh T20I Series 2023) — 2/29 (18b, HP Eco: 7.50), HP WPA: +1.79 [WON]
+     * [2024-03-22] vs Royal Challengers Bengaluru (IPL 2024) — 4/28 (24b, HP Eco: 9.23), HP WPA: +1.52 [WON]
+     * [2025-10-30] vs West Indies (West Indies in Bangladesh T20I Series 2025) — 4/22 (24b, HP Eco: 5.68), HP WPA: +0.78 [LOST]
+
+#5 NATHAN ELLIS (PACE) — Clutch Score: 44.0/100
+   Matches: 41 | Pressure Consistency Rate: 64.0% | Minnow Ratio: 0.0%
+   High RR Momentum-Breaking Dots in Wins: 101 | Key/Berserk Clutch Wickets in Wins: 27.0
+   Multi-Phase Runs Saved: PP: +9.4 | Mid: +32.6 | Death: +41.5
+   Death Yorkers Executed: 21 | Pressure Economy: 8.38 | Alive HP WPA: +4.04
+   Fair Deductions: 0.0 (CLEAN)
+   Signature High-Pressure Match Bowling Logs:
+     * [2023-04-05] vs Rajasthan Royals (IPL 2023) — 4/30 (24b, HP Eco: 4.20), HP WPA: +4.60 [WON]
+     * [2025-07-28] vs West Indies (Australia in West Indies T20I Series 2025) — 3/32 (22b, HP Eco: 4.67), HP WPA: +1.66 [WON]
+     * [2026-06-19] vs Bangladesh (Australia in Bangladesh T20I Series 2026) — 1/28 (24b, HP Eco: 4.50), HP WPA: +0.85 [WON]
+
+#6 BHUVNESHWAR KUMAR (PACE) — Clutch Score: 43.0/100
+   Matches: 100 | Pressure Consistency Rate: 60.3% | Minnow Ratio: 2.7%
+   High RR Momentum-Breaking Dots in Wins: 138 | Key/Berserk Clutch Wickets in Wins: 39.5
+   Multi-Phase Runs Saved: PP: +16.4 | Mid: -3.0 | Death: +41.2
+   Death Yorkers Executed: 101 | Pressure Economy: 8.52 | Alive HP WPA: +25.54
+   Fair Deductions: -2.4
+   Signature High-Pressure Match Bowling Logs:
+     * [2022-05-17] vs Mumbai Indians (IPL 2022) — 2/26 (24b, HP Eco: 3.00), HP WPA: +9.59 [WON]
+     * [2022-08-06] vs West Indies (India in West Indies T20I Series 2022) — 0/20 (18b, HP Eco: 6.00), HP WPA: +2.11 [WON]
+     * [2022-04-17] vs Punjab Kings (IPL 2022) — 3/22 (24b, HP Eco: 5.40), HP WPA: +1.95 [WON]
+
+#7 RASHID KHAN (SPIN) — Clutch Score: 39.7/100
+   Matches: 122 | Pressure Consistency Rate: 60.4% | Minnow Ratio: 16.6%
+   High RR Momentum-Breaking Dots in Wins: 121 | Key/Berserk Clutch Wickets in Wins: 35.0
+   Multi-Phase Runs Saved: PP: +20.2 | Mid: +19.5 | Death: +10.7
+   Death Yorkers Executed: 1 | Pressure Economy: 8.65 | Alive HP WPA: -3.19
+   Fair Deductions: 0.0 (CLEAN)
+   Signature High-Pressure Match Bowling Logs:
+     * [2022-04-08] vs Punjab Kings (IPL 2022) — 3/22 (24b, HP Eco: 4.20), HP WPA: +6.56 [WON]
+     * [2022-04-23] vs Kolkata Knight Riders (IPL 2022) — 2/22 (24b, HP Eco: 0.00), HP WPA: +4.98 [WON]
+     * [2026-04-08] vs Delhi Capitals (IPL 2026) — 3/17 (24b, HP Eco: 4.20), HP WPA: +0.83 [WON]
+
+#8 AXAR PATEL (SPIN) — Clutch Score: 38.8/100
+   Matches: 135 | Pressure Consistency Rate: 55.8% | Minnow Ratio: 3.8%
+   High RR Momentum-Breaking Dots in Wins: 153 | Key/Berserk Clutch Wickets in Wins: 47.5
+   Multi-Phase Runs Saved: PP: +7.4 | Mid: -1.2 | Death: +2.9
+   Death Yorkers Executed: 2 | Pressure Economy: 8.33 | Alive HP WPA: +1.94
+   Fair Deductions: -1.0
+   Signature High-Pressure Match Bowling Logs:
+     * [2025-12-09] vs South Africa (South Africa in India T20I Series 2025) — 2/7 (12b, HP Eco: 0.00), HP WPA: +2.16 [WON]
+     * [2024-07-28] vs Sri Lanka (India in Sri Lanka T20I Series 2024) — 2/29 (24b, HP Eco: 5.25), HP WPA: +1.47 [WON]
+     * [2022-09-20] vs Australia (Australia in India T20I Series 2022) — 3/17 (24b, HP Eco: 6.55), HP WPA: +0.95 [LOST]
+
+#9 VARUN CHAKRAVARTHY (SPIN) — Clutch Score: 38.6/100
+   Matches: 94 | Pressure Consistency Rate: 57.8% | Minnow Ratio: 0.6%
+   High RR Momentum-Breaking Dots in Wins: 114 | Key/Berserk Clutch Wickets in Wins: 35.5
+   Multi-Phase Runs Saved: PP: +36.7 | Mid: +25.7 | Death: -9.6
+   Death Yorkers Executed: 1 | Pressure Economy: 8.63 | Alive HP WPA: +20.99
+   Fair Deductions: -7.7
+   Signature High-Pressure Match Bowling Logs:
+     * [2024-05-21] vs Sunrisers Hyderabad (IPL 2024) — 2/23 (24b, HP Eco: 6.00), HP WPA: +5.00 [WON]
+     * [2025-04-29] vs Delhi Capitals (IPL 2025) — 2/42 (24b, HP Eco: 7.50), HP WPA: +3.57 [WON]
+     * [2025-09-24] vs Bangladesh (Asia Cup 2025) — 3/29 (24b, HP Eco: 0.00), HP WPA: +3.57 [WON]
+
+#10 MAHEESH THEEKSHANA (SPIN) — Clutch Score: 38.3/100
+   Matches: 98 | Pressure Consistency Rate: 54.7% | Minnow Ratio: 8.3%
+   High RR Momentum-Breaking Dots in Wins: 100 | Key/Berserk Clutch Wickets in Wins: 29.8
+   Multi-Phase Runs Saved: PP: +41.9 | Mid: +2.8 | Death: +39.6
+   Death Yorkers Executed: 5 | Pressure Economy: 8.40 | Alive HP WPA: +9.49
+   Fair Deductions: 0.0 (CLEAN)
+   Signature High-Pressure Match Bowling Logs:
+     * [2024-01-14] vs Zimbabwe (Zimbabwe in Sri Lanka T20I Series 2024) — 2/16 (24b, HP Eco: 1.50), HP WPA: +1.81 [WON]
+     * [2024-10-15] vs West Indies (West Indies in Sri Lanka T20I Series 2024) — 2/9 (19b, HP Eco: 2.67), HP WPA: +1.76 [WON]
+     * [2022-05-04] vs Royal Challengers Bengaluru (IPL 2022) — 3/27 (24b, HP Eco: 4.59), HP WPA: +1.32 [LOST]
+
+===============================================================================================
+  INSTITUTIONAL CRICKET AUDITS: DETAILED EVIDENCE
+===============================================================================================
+
+1. SUBSTANTIVE VOLUME FILTER (MS DHONI AUDIT):
+   * Substantive Batting Volume Filter: Requires minimum 500 total balls faced.
+   * MSD faced only 460 balls in 48 matches (an average of 9.5 balls/innings).
+   * Cameo specialist appearances under 500 balls do not qualify for a full-innings batting Top 10.
+
+2. NICHOLAS POORAN (#10, 48.6 pts) SURPASSES SHUBMAN GILL (#11, 47.3 pts):
+   * Pooran: +25.49 Counter-Attack, +6.29 Rescue, +1.91 Death-Alive, 74.5% Consistency, 0.0 Deductions!
+   * Gill: Conceded NEGATIVE Crisis Rescue (-2.03 WPA) and takes a -10.2 pt deduction. Fails when early wickets fall.
+
+3. VIRAT KOHLI (#9, 53.3 pts) — THE CHASE MASTER:
+   * +35.50 Counter-Attack Chasing WPA, 6 Authentic MWPPs, 10 crucible wins, 69.1% consistency, 0.0 deductions.
+
+4. MUSTAFIZUR RAHMAN RECALIBRATION (#2 -> #4, 45.3 pts):
+   * 324 deliveries (20.7% of career balls) vs minnows on slow Dhaka pitches discounted at 0.40x.
+   * Jasprit Bumrah (#1), Sunil Narine (#2), and Josh Hazlewood (#3) rightfully form the top 3.
+
+5. CRITICAL PHASE DISQUALIFICATIONS (DEATH OVERS RUN LEAKAGE):
+   * #19 Mohammed Siraj (31.0 pts): -20.99 runs leaked at Death (8.98 RPO) -> -16.8 pt deduction.
+   * #51 Ravi Bishnoi (15.1 pts): -41.78 runs leaked at Death (10.42 RPO) -> -33.4 pt deduction.

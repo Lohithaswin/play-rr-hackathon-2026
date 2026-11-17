@@ -1,0 +1,19 @@
+# Raw input data and zip
+6af855c0e8386_ball_by_ball.csv
+6af458274c1e8_data_pack.zip
+6af458274c1e8_data_pack/
+
+# Heavy intermediate files
+bbb_enriched.parquet
+bbb_v*.parquet
+valid_*.parquet
+bat_rankings_v*.parquet
+bowl_rankings_v*.parquet
+bat_v*.csv
+bowl_v*.csv
+
+# Python cache & temporary files
+__pycache__/
+*.py[cod]
+*$py.class
+.system_generated/
