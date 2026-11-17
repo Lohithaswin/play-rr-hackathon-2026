@@ -20,7 +20,9 @@ html_content = f"""<!DOCTYPE html>
   <style>
     :root {{
       --rr-pink: #ea008a;
+      --rr-pink-glow: rgba(234, 0, 138, 0.35);
       --rr-blue: #1e40af;
+      --rr-blue-light: #38bdf8;
       --rr-gold: #f5c518;
       --bg: #070a13;
       --card: #0f172a;
@@ -30,7 +32,6 @@ html_content = f"""<!DOCTYPE html>
       --subtext: #94a3b8;
       --green: #10b981;
       --red: #f43f5e;
-      --light-blue: #38bdf8;
     }}
     * {{
       box-sizing: border-box;
@@ -54,13 +55,13 @@ html_content = f"""<!DOCTYPE html>
 
     /* Header */
     .header-container {{
-      background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(7, 10, 19, 0.98));
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.98), rgba(7, 10, 19, 0.99));
       border: 1px solid var(--border);
-      border-left: 5px solid var(--rr-pink);
+      border-left: 6px solid var(--rr-pink);
       border-radius: 16px;
       padding: 24px 28px;
       margin-bottom: 24px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5);
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -75,17 +76,16 @@ html_content = f"""<!DOCTYPE html>
       display: flex;
       align-items: center;
       gap: 10px;
+      flex-wrap: wrap;
     }}
     .header-titles h1 span.pink {{
       color: var(--rr-pink);
-    }}
-    .header-titles h1 span.gold {{
-      color: var(--rr-gold);
+      text-shadow: 0 0 15px var(--rr-pink-glow);
     }}
     .header-titles p {{
       color: var(--subtext);
       font-size: 13px;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
     }}
     .submitter-badge {{
       display: inline-flex;
@@ -95,12 +95,12 @@ html_content = f"""<!DOCTYPE html>
       font-weight: 700;
       color: var(--rr-gold);
       background: rgba(245, 197, 24, 0.1);
-      border: 1px solid rgba(245, 197, 24, 0.25);
+      border: 1px solid rgba(245, 197, 24, 0.3);
       padding: 4px 12px;
       border-radius: 6px;
-      margin-top: 6px;
     }}
     .badge-pill {{
+      display: inline-block;
       background: rgba(234, 0, 138, 0.15);
       border: 1px solid rgba(234, 0, 138, 0.4);
       color: var(--rr-pink);
@@ -108,8 +108,9 @@ html_content = f"""<!DOCTYPE html>
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.8px;
-      padding: 4px 10px;
+      padding: 3px 10px;
       border-radius: 20px;
+      margin-bottom: 6px;
     }}
     .header-right {{
       display: flex;
@@ -131,9 +132,9 @@ html_content = f"""<!DOCTYPE html>
       border-radius: 6px;
     }}
     .pill-blue {{
-      background: rgba(30, 64, 175, 0.2);
-      border: 1px solid rgba(30, 64, 175, 0.4);
-      color: #60a5fa;
+      background: rgba(30, 64, 175, 0.25);
+      border: 1px solid rgba(30, 64, 175, 0.5);
+      color: var(--rr-blue-light);
     }}
     .pill-green {{
       background: rgba(16, 185, 129, 0.15);
@@ -155,7 +156,7 @@ html_content = f"""<!DOCTYPE html>
       padding: 16px 20px;
       flex: 1;
       min-width: 220px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
       transition: transform 0.2s ease, border-color 0.2s ease;
     }}
     .kpi-card:hover {{
@@ -180,7 +181,7 @@ html_content = f"""<!DOCTYPE html>
       letter-spacing: 1.2px;
     }}
     .kpi-val {{
-      font-size: 22px;
+      font-size: 24px;
       font-weight: 900;
       color: #ffffff;
       margin: 4px 0 2px;
@@ -206,7 +207,7 @@ html_content = f"""<!DOCTYPE html>
       background: transparent;
       border: none;
       color: var(--subtext);
-      padding: 10px 18px;
+      padding: 11px 18px;
       border-radius: 8px;
       font-size: 11px;
       font-weight: 700;
@@ -233,10 +234,13 @@ html_content = f"""<!DOCTYPE html>
       border-bottom: 3px solid var(--rr-gold);
     }}
     .tab-btn.active.tab-blue {{
-      border-bottom: 3px solid var(--rr-blue);
+      border-bottom: 3px solid var(--rr-blue-light);
     }}
     .tab-btn.active.tab-green {{
       border-bottom: 3px solid var(--green);
+    }}
+    .tab-btn.active.tab-purple {{
+      border-bottom: 3px solid #a855f7;
     }}
 
     /* Tab Contents */
@@ -256,7 +260,7 @@ html_content = f"""<!DOCTYPE html>
     }}
     .grid-2 > div {{
       flex: 1;
-      min-width: 380px;
+      min-width: 360px;
     }}
     .card-box {{
       background: var(--card);
@@ -289,7 +293,7 @@ html_content = f"""<!DOCTYPE html>
       border-bottom: 2px solid var(--rr-pink);
     }}
     table.rr-table.bowl th {{
-      color: var(--light-blue);
+      color: var(--rr-blue-light);
       border-bottom: 2px solid var(--rr-blue);
     }}
     table.rr-table td {{
@@ -298,7 +302,7 @@ html_content = f"""<!DOCTYPE html>
       color: var(--text);
     }}
     table.rr-table tr:hover td {{
-      background: rgba(255, 255, 255, 0.02);
+      background: rgba(255, 255, 255, 0.03);
     }}
     table.rr-table td.player-name {{
       text-align: left;
@@ -306,7 +310,7 @@ html_content = f"""<!DOCTYPE html>
       color: #ffffff;
     }}
     table.rr-table tr.top-1 td {{
-      background: rgba(245, 197, 24, 0.06);
+      background: rgba(245, 197, 24, 0.08);
       font-weight: 800;
     }}
 
@@ -343,6 +347,7 @@ html_content = f"""<!DOCTYPE html>
     }}
     select.rr-select:focus {{
       border-color: var(--rr-pink);
+      box-shadow: 0 0 8px var(--rr-pink-glow);
     }}
 
     /* Dossier Panel */
@@ -380,7 +385,7 @@ html_content = f"""<!DOCTYPE html>
       margin-bottom: 4px;
     }}
     .player-name-large {{
-      font-size: 19px;
+      font-size: 20px;
       font-weight: 900;
       color: #ffffff;
       letter-spacing: -0.5px;
@@ -391,16 +396,16 @@ html_content = f"""<!DOCTYPE html>
       color: var(--rr-gold);
     }}
     .player-score-large {{
-      font-size: 28px;
+      font-size: 30px;
       font-weight: 900;
       text-align: right;
     }}
     .player-desc {{
-      font-size: 11px;
+      font-size: 12px;
       color: #cbd5e1;
-      line-height: 1.5;
+      line-height: 1.6;
       background: rgba(255, 255, 255, 0.02);
-      padding: 10px;
+      padding: 12px;
       border-radius: 8px;
       border: 1px solid var(--border);
       margin-bottom: 14px;
@@ -413,11 +418,11 @@ html_content = f"""<!DOCTYPE html>
     }}
     .mini-kpi {{
       flex: 1;
-      min-width: 90px;
+      min-width: 85px;
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 8px;
-      padding: 8px 12px;
+      padding: 8px 10px;
       text-align: center;
     }}
     .mini-kpi-val {{
@@ -434,9 +439,93 @@ html_content = f"""<!DOCTYPE html>
     }}
     .match-log-item {{
       font-size: 11px;
-      padding-bottom: 6px;
-      margin-bottom: 6px;
+      padding-bottom: 8px;
+      margin-bottom: 8px;
       border-bottom: 1px dashed rgba(255, 255, 255, 0.06);
+      line-height: 1.4;
+    }}
+
+    /* Top 10 Deep Dive Cards */
+    .top10-grid {{
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 18px;
+      margin-top: 14px;
+    }}
+    .player-explain-card {{
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px;
+      transition: all 0.25s ease;
+      position: relative;
+      overflow: hidden;
+    }}
+    .player-explain-card:hover {{
+      transform: translateY(-3px);
+      border-color: rgba(255, 255, 255, 0.25);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    }}
+    .player-explain-card.bat-card {{
+      border-left: 4px solid var(--rr-pink);
+    }}
+    .player-explain-card.bowl-card {{
+      border-left: 4px solid var(--rr-blue-light);
+    }}
+    .explain-header {{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 10px;
+    }}
+    .explain-name {{
+      font-size: 17px;
+      font-weight: 900;
+      color: #ffffff;
+    }}
+    .explain-archetype {{
+      font-size: 10px;
+      font-weight: 800;
+      color: var(--rr-gold);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }}
+    .explain-score {{
+      font-size: 22px;
+      font-weight: 900;
+      text-align: right;
+    }}
+    .explain-why {{
+      font-size: 11.5px;
+      color: #cbd5e1;
+      line-height: 1.55;
+      margin-bottom: 12px;
+    }}
+    .formula-items {{
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 12px;
+      margin-bottom: 10px;
+    }}
+    .formula-row {{
+      display: flex;
+      justify-content: space-between;
+      font-size: 10.5px;
+      padding: 3px 0;
+      border-bottom: 1px dotted rgba(255, 255, 255, 0.05);
+    }}
+    .formula-row:last-child {{
+      border-bottom: none;
+    }}
+    .sig-match {{
+      font-size: 10.5px;
+      color: var(--subtext);
+      line-height: 1.4;
+      background: rgba(0, 0, 0, 0.25);
+      padding: 6px 10px;
+      border-radius: 6px;
+      border-left: 2px solid var(--rr-gold);
     }}
 
     /* Case Studies Cards */
@@ -479,6 +568,29 @@ html_content = f"""<!DOCTYPE html>
       border: 1px solid var(--border);
     }}
 
+    /* Comparison Tool */
+    .compare-container {{
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px;
+      margin-bottom: 24px;
+    }}
+    .compare-selectors {{
+      display: flex;
+      gap: 20px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }}
+    .compare-card {{
+      flex: 1;
+      min-width: 280px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+    }}
+
     /* Footer */
     footer {{
       margin-top: 40px;
@@ -514,7 +626,7 @@ html_content = f"""<!DOCTYPE html>
     <div class="header-right">
       <div class="pills-group">
         <span class="pill pill-blue">SEASON 2 ROUND 1</span>
-        <span class="pill pill-green">PRODUCTION RELEASE 3.0</span>
+        <span class="pill pill-green">PRODUCTION RELEASE 3.1</span>
       </div>
       <div style="font-size: 11px; color: var(--subtext); margin-top: 4px;">
         Dataset: 2022–2026 Cycle (883 Matches, 190,811 Deliveries)
@@ -529,8 +641,8 @@ html_content = f"""<!DOCTYPE html>
       <div class="kpi-val">190,811</div>
       <div class="kpi-sub">18 Contextual Machine Learning Features</div>
     </div>
-    <div class="kpi-card" style="border-top: 3px solid var(--light-blue);">
-      <div><span class="kpi-tag" style="color: var(--light-blue);">MATCHES</span><span class="kpi-title">Crucible Fixtures</span></div>
+    <div class="kpi-card" style="border-top: 3px solid var(--rr-blue-light);">
+      <div><span class="kpi-tag" style="color: var(--rr-blue-light);">MATCHES</span><span class="kpi-title">Crucible Fixtures</span></div>
       <div class="kpi-val">883</div>
       <div class="kpi-sub">IPL Franchises & ICC Tier-1 T20Is</div>
     </div>
@@ -550,8 +662,9 @@ html_content = f"""<!DOCTYPE html>
   <nav class="tabs-nav">
     <button class="tab-btn active tab-pink" onclick="switchTab('tab-rankings', this)">1. Index Leaderboards & Multi-Phase Audit</button>
     <button class="tab-btn tab-gold" onclick="switchTab('tab-proofs', this)">2. Top 10 Visual Proofs & Evidence Dossiers</button>
-    <button class="tab-btn tab-blue" onclick="switchTab('tab-audits', this)">3. Analytical Case Studies (The 5 Debates)</button>
-    <button class="tab-btn tab-green" onclick="switchTab('tab-methodology', this)">4. Mathematical Architecture & Formulas</button>
+    <button class="tab-btn tab-purple" onclick="switchTab('tab-explanations', this)">3. How Each Player Reached Top 10 (Deep Dives)</button>
+    <button class="tab-btn tab-blue" onclick="switchTab('tab-audits', this)">4. Analytical Case Studies (The 5 Debates)</button>
+    <button class="tab-btn tab-green" onclick="switchTab('tab-methodology', this)">5. Mathematical Architecture & Formulas</button>
   </nav>
 
   <!-- TAB 1: RANKINGS & TABLES -->
@@ -594,7 +707,7 @@ html_content = f"""<!DOCTYPE html>
 
       <div class="card-box">
         <div style="margin-bottom: 8px;">
-          <span style="font-size: 12px; font-weight: 900; color: var(--light-blue); letter-spacing: 0.5px;">TOP 10 QUALIFIED BOWLERS (MULTI-PHASE AUDIT)</span>
+          <span style="font-size: 12px; font-weight: 900; color: var(--rr-blue-light); letter-spacing: 0.5px;">TOP 10 QUALIFIED BOWLERS (MULTI-PHASE AUDIT)</span>
           <span style="font-size: 11px; color: var(--subtext); margin-left: 10px;">PP, Middle, and Death Runs Saved Above Par</span>
         </div>
         <div class="table-container">
@@ -610,7 +723,7 @@ html_content = f"""<!DOCTYPE html>
                 <th>Death Saved</th>
                 <th>Pressure Eco</th>
                 <th>Deductions</th>
-                <th style="color:var(--light-blue);">Index Rating</th>
+                <th style="color:var(--rr-blue-light);">Index Rating</th>
               </tr>
             </thead>
             <tbody></tbody>
@@ -624,16 +737,21 @@ html_content = f"""<!DOCTYPE html>
   <div id="tab-proofs" class="tab-content">
     <div class="grid-2">
       <div class="card-box">
-        <div id="scatter-chart" style="width:100%; height:370px;"></div>
+        <div id="scatter-chart" style="width:100%; height:400px;"></div>
+        <div style="margin-top: 8px; font-size: 11px; color: var(--subtext); text-align: center;">
+          <span style="color: var(--rr-gold); font-weight:700;">● Gold: Top 3</span> &nbsp;|&nbsp; 
+          <span style="color: var(--rr-pink); font-weight:700;">● Pink: Top 4–10</span> &nbsp;|&nbsp; 
+          <span style="color: var(--red); font-weight:700;">● Red: Shubman Gill (#11 Flaw Demotion)</span>
+        </div>
       </div>
       <div class="card-box">
-        <div id="bar-phases-chart" style="width:100%; height:370px;"></div>
+        <div id="bar-phases-chart" style="width:100%; height:400px;"></div>
       </div>
     </div>
 
     <div class="grid-2">
       <div class="card-box">
-        <div id="minnow-chart" style="width:100%; height:320px;"></div>
+        <div id="minnow-chart" style="width:100%; height:340px;"></div>
       </div>
       <div class="card-box">
         <h4 style="margin: 0 0 10px; font-size: 12px; font-weight: 900; color: var(--rr-gold); letter-spacing: 1px;">CRITICAL TAKEAWAYS FROM VISUAL PROOFS</h4>
@@ -661,7 +779,7 @@ html_content = f"""<!DOCTYPE html>
           <select id="sel-bat" class="rr-select" onchange="updateDossier()"></select>
         </div>
         <div class="select-item">
-          <label style="color: var(--light-blue);">Select Bowler:</label>
+          <label style="color: var(--rr-blue-light);">Select Bowler:</label>
           <select id="sel-bowl" class="rr-select" onchange="updateDossier()"></select>
         </div>
       </div>
@@ -673,7 +791,7 @@ html_content = f"""<!DOCTYPE html>
             <div>
               <span class="rank-tag" id="bat-rank-tag" style="background: var(--rr-pink);">RANK #1</span>
               <div class="player-name-large" id="bat-name-large">DAVID MILLER</div>
-              <div class="player-badge-text" id="bat-badge-text">World #1 Match-Winning Chase Finisher</div>
+              <div class="player-badge-text" id="bat-badge-text">The Undisputed World #1 Chase Finisher</div>
             </div>
             <div style="text-align: right;">
               <span style="font-size: 9px; color: var(--subtext); font-weight: 700; letter-spacing: 1px;">INDEX RATING</span>
@@ -689,8 +807,12 @@ html_content = f"""<!DOCTYPE html>
               <div class="mini-kpi-lbl">Consistency</div>
             </div>
             <div class="mini-kpi" style="border-top: 2px solid var(--rr-gold);">
-              <div class="mini-kpi-val" id="bat-kpi-hl" style="color: var(--rr-gold);">--</div>
-              <div class="mini-kpi-lbl" id="bat-kpi-hl-lbl">Proof Metric</div>
+              <div class="mini-kpi-val" id="bat-kpi-ca" style="color: var(--rr-gold);">--</div>
+              <div class="mini-kpi-lbl">Chase WPA</div>
+            </div>
+            <div class="mini-kpi" style="border-top: 2px solid var(--rr-blue-light);">
+              <div class="mini-kpi-val" id="bat-kpi-rescue" style="color: var(--rr-blue-light);">--</div>
+              <div class="mini-kpi-lbl">Crisis Rescue</div>
             </div>
             <div class="mini-kpi" style="border-top: 2px solid var(--red);" id="bat-kpi-ded-card">
               <div class="mini-kpi-val" id="bat-kpi-ded" style="color: var(--subtext);">--</div>
@@ -711,11 +833,11 @@ html_content = f"""<!DOCTYPE html>
             <div>
               <span class="rank-tag" id="bowl-rank-tag" style="background: var(--rr-blue);">RANK #1</span>
               <div class="player-name-large" id="bowl-name-large">JASPRIT BUMRAH</div>
-              <div class="player-badge-text" id="bowl-badge-text">Undisputed King of Pace</div>
+              <div class="player-badge-text" id="bowl-badge-text">Undisputed King of Pace & Clutch Defense</div>
             </div>
             <div style="text-align: right;">
               <span style="font-size: 9px; color: var(--subtext); font-weight: 700; letter-spacing: 1px;">INDEX RATING</span>
-              <div class="player-score-large" id="bowl-score-large" style="color: var(--light-blue);">78.5</div>
+              <div class="player-score-large" id="bowl-score-large" style="color: var(--rr-blue-light);">78.5</div>
             </div>
           </div>
 
@@ -726,9 +848,13 @@ html_content = f"""<!DOCTYPE html>
               <div class="mini-kpi-val" id="bowl-kpi-cons" style="color: var(--green);">--</div>
               <div class="mini-kpi-lbl">Consistency</div>
             </div>
-            <div class="mini-kpi" style="border-top: 2px solid var(--rr-gold);">
-              <div class="mini-kpi-val" id="bowl-kpi-hl" style="color: var(--rr-gold);">--</div>
-              <div class="mini-kpi-lbl" id="bowl-kpi-hl-lbl">Proof Metric</div>
+            <div class="mini-kpi" style="border-top: 2px solid var(--rr-pink);">
+              <div class="mini-kpi-val" id="bowl-kpi-death" style="color: var(--rr-pink);">--</div>
+              <div class="mini-kpi-lbl">Death Saved</div>
+            </div>
+            <div class="mini-kpi" style="border-top: 2px solid var(--rr-blue-light);">
+              <div class="mini-kpi-val" id="bowl-kpi-eco" style="color: var(--rr-blue-light);">--</div>
+              <div class="mini-kpi-lbl">Pressure Eco</div>
             </div>
             <div class="mini-kpi" style="border-top: 2px solid var(--red);" id="bowl-kpi-ded-card">
               <div class="mini-kpi-val" id="bowl-kpi-ded" style="color: var(--subtext);">--</div>
@@ -739,14 +865,38 @@ html_content = f"""<!DOCTYPE html>
           <div id="bowl-waterfall-chart" style="width:100%; height:240px; margin-bottom: 12px;"></div>
 
           <hr style="border: none; border-top: 1px solid var(--border); margin: 12px 0;">
-          <h5 style="margin: 0 0 8px; font-size: 11px; color: var(--light-blue); text-transform: uppercase; letter-spacing: 0.5px;">Crucible Match Proofs (High-Leverage Record Log):</h5>
+          <h5 style="margin: 0 0 8px; font-size: 11px; color: var(--rr-blue-light); text-transform: uppercase; letter-spacing: 0.5px;">Crucible Match Proofs (High-Leverage Record Log):</h5>
           <div id="bowl-logs-container"></div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- TAB 3: CASE STUDIES -->
+  <!-- TAB 3: HOW EACH PLAYER REACHED TOP 10 (COMPREHENSIVE DEEP DIVES) -->
+  <div id="tab-explanations" class="tab-content">
+    <div style="margin-bottom: 16px;">
+      <h3 style="font-size: 16px; font-weight: 900; color: #ffffff; letter-spacing: 0.5px;">
+        <span style="color: var(--rr-gold);">THE CRUCIBLE ROSTER:</span> Exactly How Each Player Earned Their Top 10 Rank
+      </h3>
+      <p style="font-size: 12px; color: var(--subtext); margin-top: 4px;">
+        Every ranking is strictly data-driven: isolating high-pressure win probability added, collapse rescue, opponent tiering, and zero tolerance for fatal execution flaws.
+      </p>
+    </div>
+
+    <!-- Toggle Buttons for Batters vs Bowlers Breakdown -->
+    <div style="display:flex; gap:10px; margin-bottom: 16px;">
+      <button id="btn-show-bat-explain" class="tab-btn active tab-pink" onclick="toggleExplainView('bat')">Top 10 Batters Qualification (10 Players)</button>
+      <button id="btn-show-bowl-explain" class="tab-btn tab-blue" onclick="toggleExplainView('bowl')">Top 10 Bowlers Qualification (10 Players)</button>
+    </div>
+
+    <!-- Batters Breakdown Grid -->
+    <div id="batters-explain-grid" class="top10-grid"></div>
+
+    <!-- Bowlers Breakdown Grid -->
+    <div id="bowlers-explain-grid" class="top10-grid" style="display:none;"></div>
+  </div>
+
+  <!-- TAB 4: CASE STUDIES -->
   <div id="tab-audits" class="tab-content">
     <div class="grid-2">
       <!-- Case 1 -->
@@ -764,7 +914,7 @@ html_content = f"""<!DOCTYPE html>
             </ul>
           </div>
           <div class="case-box" style="background: rgba(30, 64, 175, 0.05); border-color: rgba(30, 64, 175, 0.2);">
-            <h5 style="color: var(--light-blue); font-size: 12px; margin-bottom: 6px;">Varun Chakravarthy (#9 — 38.6 pts)</h5>
+            <h5 style="color: var(--rr-blue-light); font-size: 12px; margin-bottom: 6px;">Varun Chakravarthy (#9 — 38.6 pts)</h5>
             <ul style="padding-left: 14px; font-size: 11px; color: var(--subtext); line-height: 1.5;">
               <li>Exceptional in PP (+36.7) and Mid (+25.7)</li>
               <li style="color: var(--red);">Conceded -9.61 runs above expected at the Death</li>
@@ -828,7 +978,7 @@ html_content = f"""<!DOCTYPE html>
     </div>
   </div>
 
-  <!-- TAB 4: MATHEMATICAL METHODOLOGY -->
+  <!-- TAB 5: MATHEMATICAL METHODOLOGY -->
   <div id="tab-methodology" class="tab-content">
     <div class="grid-2">
       <div class="card-box">
@@ -864,22 +1014,22 @@ html_content = f"""<!DOCTYPE html>
         <h3 style="color: #ffffff; font-size: 15px; font-weight: 900; margin: 4px 0 12px;">DYNAMIC BALL-BY-BALL PRESSURE DETECTION</h3>
         
         <div style="background: rgba(255, 255, 255, 0.02); padding: 12px; border-radius: 8px; border: 1px solid var(--border); margin-bottom: 12px;">
-          <h4 style="color: var(--light-blue); font-size: 12px; margin-bottom: 4px;">1. Instantaneous Leverage Index (LI ≥ 1.50)</h4>
+          <h4 style="color: var(--rr-blue-light); font-size: 12px; margin-bottom: 4px;">1. Instantaneous Leverage Index (LI ≥ 1.50)</h4>
           <p style="font-size: 11px; color: var(--subtext); line-height: 1.5;">Evaluated on every delivery as the derivative of Win Probability: LI = (ΔWP_wicket - ΔWP_boundary) / σ_WP. Isolates deliveries where a single boundary or wicket swings match probability by at least 1.5x the historical volatility (top 15% game-defining deliveries).</p>
         </div>
 
         <div style="background: rgba(255, 255, 255, 0.02); padding: 12px; border-radius: 8px; border: 1px solid var(--border); margin-bottom: 12px;">
-          <h4 style="color: var(--light-blue); font-size: 12px; margin-bottom: 4px;">2. Scoreboard Chase Pressure (RRR ≥ 10.0 RPO)</h4>
+          <h4 style="color: var(--rr-blue-light); font-size: 12px; margin-bottom: 4px;">2. Scoreboard Chase Pressure (RRR ≥ 10.0 RPO)</h4>
           <p style="font-size: 11px; color: var(--subtext); line-height: 1.5;">Triggered in second innings run chases where required run rate reaches or exceeds 10.0 runs per over with fewer than 8 wickets in hand. Evaluates ice-cold boundary hitting under escalating scoreboard pressure.</p>
         </div>
 
         <div style="background: rgba(255, 255, 255, 0.02); padding: 12px; border-radius: 8px; border: 1px solid var(--border); margin-bottom: 12px;">
-          <h4 style="color: var(--light-blue); font-size: 12px; margin-bottom: 4px;">3. Crisis Collapse Windows (Early & Middle Overs)</h4>
+          <h4 style="color: var(--rr-blue-light); font-size: 12px; margin-bottom: 4px;">3. Crisis Collapse Windows (Early & Middle Overs)</h4>
           <p style="font-size: 11px; color: var(--subtext); line-height: 1.5;">Identifies deliveries where the batting team is reeling in a top-order collapse: Powerplay Crisis (Overs 1–6 with ≥ 2 wickets lost) or Middle Overs Collapse (Overs 7–12 with ≥ 4 wickets lost). Distinguishes authentic innings resurrection from front-running.</p>
         </div>
 
         <div style="background: rgba(255, 255, 255, 0.02); padding: 12px; border-radius: 8px; border: 1px solid var(--border);">
-          <h4 style="color: var(--light-blue); font-size: 12px; margin-bottom: 4px;">4. Death Crucible (Overs 16–20)</h4>
+          <h4 style="color: var(--rr-blue-light); font-size: 12px; margin-bottom: 4px;">4. Death Crucible (Overs 16–20)</h4>
           <p style="font-size: 11px; color: var(--subtext); line-height: 1.5;">Deliveries in the final four overs when match margin is under 36 runs with result undecided. Death yorkers and boundary balls carry maximal leverage multipliers.</p>
         </div>
       </div>
@@ -903,7 +1053,7 @@ html_content = f"""<!DOCTYPE html>
 
         <hr style="border: none; border-top: 1px solid var(--border); margin: 12px 0;">
 
-        <h5 style="color: var(--light-blue); font-size: 11px; font-weight: 800; margin-bottom: 6px;">BOWLING CLUTCH SCORE (0–100 SCALE):</h5>
+        <h5 style="color: var(--rr-blue-light); font-size: 11px; font-weight: 800; margin-bottom: 6px;">BOWLING CLUTCH SCORE (0–100 SCALE):</h5>
         <ul style="padding-left: 14px; font-size: 11px; color: var(--subtext); line-height: 1.6;">
           <li><b>Quality Runs Saved (30%):</b> ML runs saved across PP (1–6), Middle (7–15), and Death (16–20).</li>
           <li><b>Momentum-Breaking Dots (20%):</b> Dot balls delivered in high-pressure defensive overs.</li>
@@ -936,7 +1086,7 @@ html_content = f"""<!DOCTYPE html>
   <!-- FOOTER -->
   <footer>
     <div>
-      <b>Play RR Hackathon 2026 — Season 2</b> | Submitter: <b>Lohithaswin V</b> | Rajasthan Royals Analytics Studio v3.0
+      <b>Play RR Hackathon 2026 — Season 2</b> | Submitter: <b>Lohithaswin V</b> | Rajasthan Royals Analytics Studio v3.1
     </div>
     <div>
       <a href="https://github.com/Lohithaswin/play-rr-hackathon-2026" target="_blank" style="color:var(--rr-pink); font-weight:700; margin-right:16px;">GitHub Repository</a>
@@ -948,7 +1098,7 @@ html_content = f"""<!DOCTYPE html>
   <script>
     const PAYLOAD = {payload_json_str};
 
-    // Render Tab 1 Static Charts
+    // Render Tab 1 & Tab 2 Static Charts
     function renderMainCharts() {{
       Plotly.newPlot('bat10-chart', PAYLOAD.bat10_chart.data, PAYLOAD.bat10_chart.layout, {{responsive: true, displayModeBar: false}});
       Plotly.newPlot('bowl10-chart', PAYLOAD.bowl10_chart.data, PAYLOAD.bowl10_chart.layout, {{responsive: true, displayModeBar: false}});
@@ -994,7 +1144,7 @@ html_content = f"""<!DOCTYPE html>
           <td>${{r.death_saved}}</td>
           <td>${{r.eco}}</td>
           <td style="color:${{r.deductions !== '-0.0' ? 'var(--red)' : 'var(--subtext)'}}">${{r.deductions}}</td>
-          <td style="font-weight:900; color:var(--light-blue);">${{r.score}}</td>
+          <td style="font-weight:900; color:var(--rr-blue-light);">${{r.score}}</td>
         `;
         bowlTbody.appendChild(tr);
       }});
@@ -1033,12 +1183,12 @@ html_content = f"""<!DOCTYPE html>
       if (b) {{
         document.getElementById('bat-rank-tag').textContent = `RANK #${{b.rank}}`;
         document.getElementById('bat-name-large').textContent = b.name.toUpperCase();
-        document.getElementById('bat-badge-text').textContent = b.badge;
+        document.getElementById('bat-badge-text').textContent = b.title;
         document.getElementById('bat-score-large').textContent = b.score.toFixed(1);
-        document.getElementById('bat-desc').textContent = b.desc;
+        document.getElementById('bat-desc').textContent = b.why_top10;
         document.getElementById('bat-kpi-cons').textContent = b.consistency;
-        document.getElementById('bat-kpi-hl').textContent = b.hl_stat;
-        document.getElementById('bat-kpi-hl-lbl').textContent = b.hl_lbl;
+        document.getElementById('bat-kpi-ca').textContent = b.ca_wpa;
+        document.getElementById('bat-kpi-rescue').textContent = b.rescue_wpa;
         document.getElementById('bat-kpi-ded').textContent = b.deductions;
         document.getElementById('bat-kpi-ded').style.color = b.deductions_val > 0 ? 'var(--red)' : 'var(--subtext)';
 
@@ -1063,12 +1213,12 @@ html_content = f"""<!DOCTYPE html>
       if (bw) {{
         document.getElementById('bowl-rank-tag').textContent = `RANK #${{bw.rank}}`;
         document.getElementById('bowl-name-large').textContent = bw.name.toUpperCase();
-        document.getElementById('bowl-badge-text').textContent = bw.badge;
+        document.getElementById('bowl-badge-text').textContent = bw.title;
         document.getElementById('bowl-score-large').textContent = bw.score.toFixed(1);
-        document.getElementById('bowl-desc').textContent = bw.desc;
+        document.getElementById('bowl-desc').textContent = bw.why_top10;
         document.getElementById('bowl-kpi-cons').textContent = bw.consistency;
-        document.getElementById('bowl-kpi-hl').textContent = bw.hl_stat;
-        document.getElementById('bowl-kpi-hl-lbl').textContent = bw.hl_lbl;
+        document.getElementById('bowl-kpi-death').textContent = bw.death_saved;
+        document.getElementById('bowl-kpi-eco').textContent = bw.eco;
         document.getElementById('bowl-kpi-ded').textContent = bw.deductions;
         document.getElementById('bowl-kpi-ded').style.color = bw.deductions_val > 0 ? 'var(--red)' : 'var(--subtext)';
 
@@ -1090,6 +1240,107 @@ html_content = f"""<!DOCTYPE html>
       }}
     }}
 
+    // Render Top 10 Deep Dive Explanations Cards
+    function renderExplanations() {{
+      const batGrid = document.getElementById('batters-explain-grid');
+      batGrid.innerHTML = '';
+      Object.keys(PAYLOAD.top10_bat_explanations).forEach(name => {{
+        const item = PAYLOAD.top10_bat_explanations[name];
+        const card = document.createElement('div');
+        card.className = 'player-explain-card bat-card';
+        
+        let formulaHtml = '';
+        item.key_formula_breakdown.forEach(f => {{
+          formulaHtml += `
+            <div class="formula-row">
+              <span style="color:var(--subtext);">${{f.metric}}</span>
+              <span style="font-weight:700; color:${{f.color}};">${{f.val}} (${{f.impact}})</span>
+            </div>
+          `;
+        }});
+
+        const bData = PAYLOAD.batters_data[name] || {{score: 0}};
+        card.innerHTML = `
+          <div class="explain-header">
+            <div>
+              <span class="rank-tag" style="background:var(--rr-pink);">RANK #${{item.rank}}</span>
+              <div class="explain-name">${{name.toUpperCase()}}</div>
+              <div class="explain-archetype">${{item.archetype}}</div>
+            </div>
+            <div class="explain-score" style="color:var(--rr-pink);">${{bData.score ? bData.score.toFixed(1) : ''}} <span style="font-size:12px; color:var(--subtext);">pts</span></div>
+          </div>
+          <p class="explain-why">${{item.why_top10}}</p>
+          <div class="formula-items">
+            <div style="font-size:9px; font-weight:800; color:var(--rr-gold); text-transform:uppercase; margin-bottom:4px;">Core Index Contribution:</div>
+            ${{formulaHtml}}
+          </div>
+          <div class="sig-match">
+            <b style="color:var(--rr-gold);">Crucible Proof:</b> ${{item.signature_matches}}
+          </div>
+        `;
+        batGrid.appendChild(card);
+      }});
+
+      const bowlGrid = document.getElementById('bowlers-explain-grid');
+      bowlGrid.innerHTML = '';
+      Object.keys(PAYLOAD.top10_bowl_explanations).forEach(name => {{
+        const item = PAYLOAD.top10_bowl_explanations[name];
+        const card = document.createElement('div');
+        card.className = 'player-explain-card bowl-card';
+        
+        let formulaHtml = '';
+        item.key_formula_breakdown.forEach(f => {{
+          formulaHtml += `
+            <div class="formula-row">
+              <span style="color:var(--subtext);">${{f.metric}}</span>
+              <span style="font-weight:700; color:${{f.color}};">${{f.val}} (${{f.impact}})</span>
+            </div>
+          `;
+        }});
+
+        const bwData = PAYLOAD.bowlers_data[name] || {{score: 0}};
+        card.innerHTML = `
+          <div class="explain-header">
+            <div>
+              <span class="rank-tag" style="background:var(--rr-blue);">RANK #${{item.rank}}</span>
+              <div class="explain-name">${{name.toUpperCase()}}</div>
+              <div class="explain-archetype">${{item.archetype}}</div>
+            </div>
+            <div class="explain-score" style="color:var(--rr-blue-light);">${{bwData.score ? bwData.score.toFixed(1) : ''}} <span style="font-size:12px; color:var(--subtext);">pts</span></div>
+          </div>
+          <p class="explain-why">${{item.why_top10}}</p>
+          <div class="formula-items">
+            <div style="font-size:9px; font-weight:800; color:var(--rr-gold); text-transform:uppercase; margin-bottom:4px;">Core Index Contribution:</div>
+            ${{formulaHtml}}
+          </div>
+          <div class="sig-match">
+            <b style="color:var(--rr-gold);">Crucible Proof:</b> ${{item.signature_matches}}
+          </div>
+        `;
+        bowlGrid.appendChild(card);
+      }});
+    }}
+
+    // Toggle Explain View (Batters vs Bowlers)
+    function toggleExplainView(type) {{
+      const batGrid = document.getElementById('batters-explain-grid');
+      const bowlGrid = document.getElementById('bowlers-explain-grid');
+      const btnBat = document.getElementById('btn-show-bat-explain');
+      const btnBowl = document.getElementById('btn-show-bowl-explain');
+
+      if (type === 'bat') {{
+        batGrid.style.display = 'grid';
+        bowlGrid.style.display = 'none';
+        btnBat.className = 'tab-btn active tab-pink';
+        btnBowl.className = 'tab-btn tab-blue';
+      }} else {{
+        batGrid.style.display = 'none';
+        bowlGrid.style.display = 'grid';
+        btnBat.className = 'tab-btn tab-pink';
+        btnBowl.className = 'tab-btn active tab-blue';
+      }}
+    }}
+
     // Switch Tabs
     function switchTab(tabId, btn) {{
       document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
@@ -1099,8 +1350,20 @@ html_content = f"""<!DOCTYPE html>
       const target = document.getElementById(tabId);
       if (target) {{
         target.classList.add('active');
-        // Trigger Plotly relayout to resize appropriately
-        window.dispatchEvent(new Event('resize'));
+        // Trigger Plotly relayout to ensure proper width when tab becomes visible
+        setTimeout(() => {{
+          window.dispatchEvent(new Event('resize'));
+          if (tabId === 'tab-proofs') {{
+            Plotly.Plots.resize('scatter-chart');
+            Plotly.Plots.resize('bar-phases-chart');
+            Plotly.Plots.resize('minnow-chart');
+            Plotly.Plots.resize('bat-waterfall-chart');
+            Plotly.Plots.resize('bowl-waterfall-chart');
+          }} else if (tabId === 'tab-rankings') {{
+            Plotly.Plots.resize('bat10-chart');
+            Plotly.Plots.resize('bowl10-chart');
+          }}
+        }}, 50);
       }}
     }}
 
@@ -1110,6 +1373,7 @@ html_content = f"""<!DOCTYPE html>
       populateTables();
       populateDropdowns();
       updateDossier();
+      renderExplanations();
     }});
   </script>
 </body>
@@ -1119,4 +1383,4 @@ html_content = f"""<!DOCTYPE html>
 with open('index.html', 'w', encoding='utf-8') as f:
     f.write(html_content)
 
-print("Generated index.html successfully!")
+print("Generated upgraded index.html with interactive deep dives successfully!")
