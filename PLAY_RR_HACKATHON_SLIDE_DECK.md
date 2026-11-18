@@ -3,7 +3,7 @@
 
 **Project Title:** SupeRR Selector: The Halla Bol Pressure Index  
 **Subtitle:** Context-Aware Multi-Phase Leverage & Win Probability Engine | IPL & T20I (2022–2026)  
-**Lead Researcher & Submitter:** **LOHITHASWIN V**  
+**Submitted by:** **LOHITHASWIN V**  
 **Target Organization:** Rajasthan Royals (RR) Analytics & High-Performance Decision Sciences  
 **PowerPoint Presentation (14 Slides):** [Play_RR_Hackathon_Lohithaswin_V.pptx](file:///d:/rr/Play_RR_Hackathon_Lohithaswin_V.pptx)  
 **Presentation PDF Export:** [Play_RR_Hackathon_Lohithaswin_V.pdf](file:///d:/rr/Play_RR_Hackathon_Lohithaswin_V.pdf)  

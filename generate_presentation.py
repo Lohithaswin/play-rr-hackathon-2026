@@ -143,7 +143,7 @@ def build_presentation():
     pa1.space_after = Pt(4)
 
     pa2 = tf_auth.add_paragraph()
-    pa2.text = "LEAD RESEARCHER & SUBMITTER:  LOHITHASWIN V"
+    pa2.text = "SUBMITTED BY:  LOHITHASWIN V"
     pa2.font.size = Pt(18)
     pa2.font.bold = True
     pa2.font.color.rgb = WHITE
@@ -565,7 +565,7 @@ def build_presentation():
         "  • Play_RR_Hackathon_Methodology_Report_Lohithaswin_V.docx",
         "  • Play_RR_Hackathon_Methodology_Report_Lohithaswin_V.pdf",
         "  • Play_RR_Hackathon_Lohithaswin_V.pptx & .pdf",
-        "Lead Submitter: LOHITHASWIN V"
+        "Submitted by: LOHITHASWIN V"
     ], RR_BLUE)
 
     # Save presentation

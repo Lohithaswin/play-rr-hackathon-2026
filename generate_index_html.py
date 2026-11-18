@@ -718,9 +718,7 @@ html_content = f"""<!DOCTYPE html>
       </h1>
       <p>SupeRR Selector Season 2 — The Halla Bol Pressure Index (Measuring Player Reliability Under Match Pressure)</p>
       <div class="submitter-badge">
-        <span>🏆 LEAD SUBMITTER: <b>LOHITHASWIN V</b></span>
-        <span>|</span>
-        <span>Rajasthan Royals Decision Sciences Group</span>
+        <span>SUBMITTED BY: <b>LOHITHASWIN V</b></span>
       </div>
     </div>
     <div class="header-right">

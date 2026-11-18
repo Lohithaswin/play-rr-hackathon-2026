@@ -84,7 +84,7 @@ def build_methodology_document():
         
         footer = section.footer
         fp = footer.paragraphs[0]
-        fp.text = "Official Submission Report  •  Lead Submitter: Lohithaswin V  •  The Halla Bol Pressure Index"
+        fp.text = "Official Submission Report  •  Submitted by: Lohithaswin V  •  The Halla Bol Pressure Index"
         fp.alignment = WD_ALIGN_PARAGRAPH.CENTER
         fp.runs[0].font.name = 'Segoe UI'
         fp.runs[0].font.size = Pt(8.5)
@@ -130,7 +130,7 @@ def build_methodology_document():
     meta_tbl.columns[1].width = Inches(4.3)
     
     meta_data = [
-        ("Lead Submitter & Researcher:", "LOHITHASWIN V"),
+        ("Submitted by:", "LOHITHASWIN V"),
         ("Target Organization:", "Rajasthan Royals (RR) Analytics & High-Performance Decision Sciences"),
         ("Competition Domain:", "Round 1 Problem Statement: Identify Most Reliable Players Under Pressure"),
         ("Dataset Scope & Horizon:", "IPL & T20 Internationals (2022–2026 Cycle) | 883 Matches | 190,811 Deliveries"),

@@ -1,6 +1,6 @@
 # PLAY RR HACKATHON — SEASON 2 OFFICIAL SUBMISSION REPORT
 ## PROJECT TITLE: SupeRR Selector: The Halla Bol Pressure Index
-**Lead Submitter:** **LOHITHASWIN V**  
+**Submitted by:** **LOHITHASWIN V**  
 **Domain:** High-Performance Cricket Analytics & Machine Learning  
 **Target Organization:** Rajasthan Royals (RR) Analytics Group  
 **Dataset Scope:** Ball-by-ball IPL & T20 Internationals (2022–2026) | 883 Matches | 190,811 Deliveries  

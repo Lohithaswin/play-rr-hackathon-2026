@@ -1,6 +1,6 @@
 # PLAY RR HACKATHON 2026 — SupeRR Selector Season 2
 ## The Halla Bol Pressure Index: Measuring Player Reliability Under Match Pressure
-**Lead Submitter:** **LOHITHASWIN V**  
+**Submitted by:** **LOHITHASWIN V**  
 **Organization:** Rajasthan Royals High-Performance Decision Sciences  
 
 Welcome to the official repository for the **Play RR Hackathon 2026 (Round 1)** by the **Rajasthan Royals**.
