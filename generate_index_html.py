@@ -604,6 +604,106 @@ html_content = f"""<!DOCTYPE html>
       font-size: 11px;
       color: var(--subtext);
     }}
+
+    /* Submission Deliverables Bar */
+    .download-bar {{
+      background: linear-gradient(135deg, rgba(30, 41, 59, 0.85), rgba(15, 23, 42, 0.98));
+      border: 1px solid rgba(234, 0, 138, 0.35);
+      border-radius: 14px;
+      padding: 16px 22px;
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+    }}
+    .download-bar-left {{
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }}
+    .download-bar-title {{
+      font-size: 13px;
+      font-weight: 800;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      letter-spacing: 0.5px;
+    }}
+    .download-bar-sub {{
+      font-size: 11px;
+      color: var(--subtext);
+      margin-top: 2px;
+    }}
+    .download-btn-group {{
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }}
+    .dl-btn {{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 15px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      text-decoration: none !important;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }}
+    .dl-btn-pink {{
+      background: linear-gradient(135deg, var(--rr-pink), #c20072);
+      color: #ffffff !important;
+      box-shadow: 0 4px 14px var(--rr-pink-glow);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }}
+    .dl-btn-pink:hover {{
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(234, 0, 138, 0.6);
+    }}
+    .dl-btn-blue {{
+      background: linear-gradient(135deg, rgba(30, 64, 175, 0.85), rgba(30, 58, 138, 0.95));
+      color: #ffffff !important;
+      border: 1px solid rgba(96, 165, 250, 0.4);
+    }}
+    .dl-btn-blue:hover {{
+      transform: translateY(-2px);
+      background: var(--rr-blue);
+      border-color: var(--rr-blue-light);
+    }}
+    .dl-btn-gold {{
+      background: linear-gradient(135deg, rgba(245, 197, 24, 0.2), rgba(217, 119, 6, 0.25));
+      color: var(--rr-gold) !important;
+      border: 1px solid rgba(245, 197, 24, 0.5);
+    }}
+    .dl-btn-gold:hover {{
+      transform: translateY(-2px);
+      background: rgba(245, 197, 24, 0.3);
+      color: #ffffff !important;
+    }}
+    .dl-btn-dark {{
+      background: rgba(255, 255, 255, 0.07);
+      color: #ffffff !important;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }}
+    .dl-btn-dark:hover {{
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.3);
+    }}
+    .dl-badge {{
+      font-size: 9px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background: rgba(0, 0, 0, 0.35);
+      font-weight: 800;
+    }}
   </style>
 </head>
 <body>
@@ -633,6 +733,41 @@ html_content = f"""<!DOCTYPE html>
       </div>
     </div>
   </header>
+
+  <!-- OFFICIAL SUBMISSION DOWNLOADS BAR -->
+  <section class="download-bar">
+    <div class="download-bar-left">
+      <div style="font-size: 24px;">📥</div>
+      <div>
+        <div class="download-bar-title">
+          <span>OFFICIAL SUBMISSION DELIVERABLES</span>
+          <span class="badge-pill" style="margin: 0; background: rgba(16, 185, 129, 0.2); color: var(--green); border-color: rgba(16, 185, 129, 0.5);">READY FOR UNSTOP</span>
+        </div>
+        <div class="download-bar-sub">Direct one-click downloads for executive presentation deck and formal methodology whitepaper:</div>
+      </div>
+    </div>
+    <div class="download-btn-group">
+      <a href="Play_RR_Hackathon_Lohithaswin_V.pptx" download="Play_RR_Hackathon_Lohithaswin_V.pptx" class="dl-btn dl-btn-pink">
+        <span>📊 Download PPTX</span>
+        <span class="dl-badge">504 KB</span>
+      </a>
+      <a href="Play_RR_Hackathon_Lohithaswin_V.pdf" download="Play_RR_Hackathon_Lohithaswin_V.pdf" target="_blank" class="dl-btn dl-btn-blue">
+        <span>📄 Presentation PDF</span>
+        <span class="dl-badge">659 KB</span>
+      </a>
+      <a href="Play_RR_Hackathon_Methodology_Report_Lohithaswin_V.docx" download="Play_RR_Hackathon_Methodology_Report_Lohithaswin_V.docx" class="dl-btn dl-btn-gold">
+        <span>📝 Report DOCX</span>
+        <span class="dl-badge">498 KB</span>
+      </a>
+      <a href="Play_RR_Hackathon_Methodology_Report_Lohithaswin_V.pdf" download="Play_RR_Hackathon_Methodology_Report_Lohithaswin_V.pdf" target="_blank" class="dl-btn dl-btn-blue">
+        <span>📑 Report PDF</span>
+        <span class="dl-badge">583 KB</span>
+      </a>
+      <a href="https://github.com/Lohithaswin/play-rr-hackathon-2026" target="_blank" class="dl-btn dl-btn-dark">
+        <span>🐙 GitHub Repo</span>
+      </a>
+    </div>
+  </section>
 
   <!-- TOP KPI ROW -->
   <section class="kpi-row">
