@@ -10,9 +10,12 @@ Welcome to the official repository for the **Play RR Hackathon 2026 (Round 1)** 
 ### Quick Links & Deliverables
 - 🚀 **Live Interactive Web Dashboard (Instant Access):** [https://lohithaswin.github.io/play-rr-hackathon-2026/](https://lohithaswin.github.io/play-rr-hackathon-2026/)
 - 💻 **Official GitHub Repository:** [https://github.com/Lohithaswin/play-rr-hackathon-2026](https://github.com/Lohithaswin/play-rr-hackathon-2026)
-- 📊 **PowerPoint Presentation:** [Play_RR_Hackathon_Lohithaswin_V.pptx](file:///d:/rr/Play_RR_Hackathon_Lohithaswin_V.pptx)
+- 📊 **PowerPoint Presentation (14 Slides):** [Play_RR_Hackathon_Lohithaswin_V.pptx](file:///d:/rr/Play_RR_Hackathon_Lohithaswin_V.pptx)
+- 📄 **Presentation PDF Export:** [Play_RR_Hackathon_Lohithaswin_V.pdf](file:///d:/rr/Play_RR_Hackathon_Lohithaswin_V.pdf)
+- 📝 **Formal Methodology Report (Word DOCX):** [Play_RR_Hackathon_Methodology_Report_Lohithaswin_V.docx](file:///d:/rr/Play_RR_Hackathon_Methodology_Report_Lohithaswin_V.docx)
+- 📑 **Formal Methodology Report (PDF):** [Play_RR_Hackathon_Methodology_Report_Lohithaswin_V.pdf](file:///d:/rr/Play_RR_Hackathon_Methodology_Report_Lohithaswin_V.pdf)
 - 🖥️ **Executive Slide Deck Document:** [PLAY_RR_HACKATHON_SLIDE_DECK.md](file:///d:/rr/PLAY_RR_HACKATHON_SLIDE_DECK.md)
-- 📑 **Official Submission Report:** [PLAY_RR_HACKATHON_SUBMISSION.md](file:///d:/rr/PLAY_RR_HACKATHON_SUBMISSION.md)
+- 📚 **Official Submission Whitepaper:** [PLAY_RR_HACKATHON_SUBMISSION.md](file:///d:/rr/PLAY_RR_HACKATHON_SUBMISSION.md)
 - 🔍 **Inning-by-Inning Audit Logs:** [player_hp_summary.txt](file:///d:/rr/player_hp_summary.txt)
 - 📋 **Exported Transparent CSVs:** [bat_final_transparent.csv](file:///d:/rr/bat_final_transparent.csv) & [bowl_final_transparent.csv](file:///d:/rr/bowl_final_transparent.csv)
 

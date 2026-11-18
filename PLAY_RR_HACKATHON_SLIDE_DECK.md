@@ -5,7 +5,10 @@
 **Subtitle:** Context-Aware Multi-Phase Leverage & Win Probability Engine | IPL & T20I (2022–2026)  
 **Lead Researcher & Submitter:** **LOHITHASWIN V**  
 **Target Organization:** Rajasthan Royals (RR) Analytics & High-Performance Decision Sciences  
-**PowerPoint File:** [Play_RR_Hackathon_Lohithaswin_V.pptx](file:///d:/rr/Play_RR_Hackathon_Lohithaswin_V.pptx)  
+**PowerPoint Presentation (14 Slides):** [Play_RR_Hackathon_Lohithaswin_V.pptx](file:///d:/rr/Play_RR_Hackathon_Lohithaswin_V.pptx)  
+**Presentation PDF Export:** [Play_RR_Hackathon_Lohithaswin_V.pdf](file:///d:/rr/Play_RR_Hackathon_Lohithaswin_V.pdf)  
+**Methodology Report (Word Document):** [Play_RR_Hackathon_Methodology_Report_Lohithaswin_V.docx](file:///d:/rr/Play_RR_Hackathon_Methodology_Report_Lohithaswin_V.docx)  
+**Methodology Report (PDF):** [Play_RR_Hackathon_Methodology_Report_Lohithaswin_V.pdf](file:///d:/rr/Play_RR_Hackathon_Methodology_Report_Lohithaswin_V.pdf)  
 **Live Published Web Dashboard:** [https://lohithaswin.github.io/play-rr-hackathon-2026/](https://lohithaswin.github.io/play-rr-hackathon-2026/)  
 **GitHub Repository:** [https://github.com/Lohithaswin/play-rr-hackathon-2026](https://github.com/Lohithaswin/play-rr-hackathon-2026)  
 **Local Interactive Dashboard:** [http://127.0.0.1:8050](http://127.0.0.1:8050)  
@@ -131,7 +134,26 @@ $$\text{Batting Clutch Score} = \left( \sum W_i \cdot S_i \right) \cdot \text{Re
 
 ---
 
-## SLIDE 8: BOWLING MODEL: MULTI-PHASE DEFENSE ALLOCATION
+## SLIDE 8: VISUAL PROOF 1: BATTING PRESSURE ARCHETYPES & QUADRANTS
+
+### Visual Layout & Graphic Proof
+![Batting Pressure Quadrants](file:///d:/rr/assets/visual_proofs_scatter.png)
+- **High-Resolution Asset:** [assets/visual_proofs_scatter.png](file:///d:/rr/assets/visual_proofs_scatter.png)
+- **Interactive Scatter Coordinates:** Crisis Rescue WPA (X-Axis, Range: -1.0 to 1.0) vs High-Pressure ML Runs Added (Y-Axis, Range: -1.0 to 4.0).
+
+### Key Quadrant Archetypes Identified
+1. **Quadrant I (Elite All-Phase Match-Winners):**
+   - High positive Crisis Rescue WPA coupled with strong ML Runs Added above par.
+   - Anchored by **David Miller** (+42.27 CA WPA, +17.65 Death WPA) and **Suryakumar Yadav** (+234.4 ML Runs, 20 Wins).
+2. **Quadrant II (Front-Running Vulnerable):**
+   - Positive overall run accumulation but negative Crisis Rescue ($< 0.0$ WPA).
+   - Prominently features **Shubman Gill** (-2.03 Crisis Rescue WPA), visually isolated to the left of the vertical red dashed failure line ($x = 0.0$).
+3. **Quadrant IV (Pure Chase Closers):**
+   - Moderate crisis rescue with high late-innings boundary conversion under escalating RRR (Hetmyer, Phillips, Pooran).
+
+---
+
+## SLIDE 9: BOWLING MODEL: MULTI-PHASE DEFENSE ALLOCATION
 
 ### Metric Architecture & Accountability
 1. **Quality Runs Saved Across 3 Phases (30%):** Evaluated against context par across Powerplay (1–6), Middle (7–15), and Death (16–20).
@@ -146,7 +168,7 @@ $$\text{Batting Clutch Score} = \left( \sum W_i \cdot S_i \right) \cdot \text{Re
 
 ---
 
-## SLIDE 9: OFFICIAL FINAL TOP 10 BOWLERS (MULTI-PHASE DEFENSE)
+## SLIDE 10: OFFICIAL FINAL TOP 10 BOWLERS (MULTI-PHASE DEFENSE)
 
 | Rank | Bowler | Craft | Matches | PP Saved | Mid Saved | Death Saved | Minnow % | Deductions | Halla Bol Clutch Score |
 |:---:|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -163,7 +185,7 @@ $$\text{Batting Clutch Score} = \left( \sum W_i \cdot S_i \right) \cdot \text{Re
 
 ---
 
-## SLIDE 10: BOWLING FORENSIC DEEP DIVES & PHASE RISK
+## SLIDE 11: BOWLING FORENSIC DEEP DIVES & PHASE RISK
 
 ### 1. Jasprit Bumrah (#1 — 78.5 pts): Undisputed King of Pace
 - Saved **+149.8 runs above par at the death** (more than double all competitors).
@@ -184,7 +206,24 @@ $$\text{Batting Clutch Score} = \left( \sum W_i \cdot S_i \right) \cdot \text{Re
 
 ---
 
-## SLIDE 11: STRATEGIC INSIGHTS & AUCTION BLUEPRINT FOR RAJASTHAN ROYALS
+## SLIDE 12: VISUAL PROOFS 2 & 3: MULTI-PHASE MATRIX & SCHEDULE CALIBRATION
+
+### Visual Layout & Graphic Proof
+![Bowling Multi-Phase Defense Matrix & Schedule Calibration](file:///d:/rr/assets/schedule_calibration.png)
+- **High-Resolution Asset:** [assets/schedule_calibration.png](file:///d:/rr/assets/schedule_calibration.png)
+
+### Key Analytical Proofs
+1. **Multi-Phase Defensive Run Suppression Matrix:**
+   - Visual heatmap/grouped metrics displaying runs saved above expectation across Powerplay (overs 1–6), Middle Overs (overs 7–15), and Death Overs (overs 16–20).
+   - Highlights Jasprit Bumrah's unmatched outlier dominance (+149.8 Death Runs Saved) and Sunil Narine's triple-phase positive lockdown (+20.2 PP, +80.2 Mid, +23.6 Death).
+2. **Associate Minnow Delivery Exposure Audit:**
+   - Quantifies the percentage of high-pressure deliveries bowled against non-Tier-1 associate opposition.
+   - Mustafizur Rahman (20.7% minnow balls) and Rashid Khan (16.6% minnow balls) receive explicit $0.40\times$ schedule haircuts.
+   - Validates that Narine, Hazlewood, and Ellis achieved their metrics against 100% elite franchise and international batting lineups.
+
+---
+
+## SLIDE 13: STRATEGIC INSIGHTS & AUCTION BLUEPRINT FOR RAJASTHAN ROYALS
 
 ### 1. Core Retention Validation
 - **Shimron Hetmyer (#6 Batter, 59.0 pts):** Confirmed as an elite clutch closer (+21.95 CA WPA, +16.96 Rescue WPA, +10.20 Death WPA). Retaining Hetmyer guarantees proven execution when $RRR \ge 12.0$.
@@ -201,7 +240,7 @@ $$\text{Batting Clutch Score} = \left( \sum W_i \cdot S_i \right) \cdot \text{Re
 
 ---
 
-## SLIDE 12: PRODUCTION STUDIO & REPOSITORY DELIVERABLES
+## SLIDE 14: PRODUCTION STUDIO & REPOSITORY DELIVERABLES
 
 ### Live Interactive Analytics Studio
 - **Platform:** Python Dash + Plotly Web App Architecture
@@ -216,7 +255,10 @@ $$\text{Batting Clutch Score} = \left( \sum W_i \cdot S_i \right) \cdot \text{Re
 - **Sanitized UI:** Professional typography, official Rajasthan Royals color scheme, and zero extraneous emojis.
 
 ### Verified Files on Disk (`d:\rr\`)
-- Presentation Slide Deck: [Play_RR_Hackathon_Lohithaswin_V.pptx](file:///d:/rr/Play_RR_Hackathon_Lohithaswin_V.pptx)
+- PowerPoint Presentation (16:9 14 Slides): [Play_RR_Hackathon_Lohithaswin_V.pptx](file:///d:/rr/Play_RR_Hackathon_Lohithaswin_V.pptx)
+- Presentation PDF Export: [Play_RR_Hackathon_Lohithaswin_V.pdf](file:///d:/rr/Play_RR_Hackathon_Lohithaswin_V.pdf)
+- Methodology Report (Word Document): [Play_RR_Hackathon_Methodology_Report_Lohithaswin_V.docx](file:///d:/rr/Play_RR_Hackathon_Methodology_Report_Lohithaswin_V.docx)
+- Methodology Report (PDF): [Play_RR_Hackathon_Methodology_Report_Lohithaswin_V.pdf](file:///d:/rr/Play_RR_Hackathon_Methodology_Report_Lohithaswin_V.pdf)
 - Official Submission Whitepaper: [PLAY_RR_HACKATHON_SUBMISSION.md](file:///d:/rr/PLAY_RR_HACKATHON_SUBMISSION.md)
 - Repository README: [README.md](file:///d:/rr/README.md)
 - Inning-by-Inning Match Audit Log: [player_hp_summary.txt](file:///d:/rr/player_hp_summary.txt)

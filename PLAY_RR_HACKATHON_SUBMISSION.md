@@ -4,8 +4,11 @@
 **Domain:** High-Performance Cricket Analytics & Machine Learning  
 **Target Organization:** Rajasthan Royals (RR) Analytics Group  
 **Dataset Scope:** Ball-by-ball IPL & T20 Internationals (2022–2026) | 883 Matches | 190,811 Deliveries  
-**PowerPoint Presentation:** [Play_RR_Hackathon_Lohithaswin_V.pptx](file:///d:/rr/Play_RR_Hackathon_Lohithaswin_V.pptx)  
-**Slide Deck Document:** [PLAY_RR_HACKATHON_SLIDE_DECK.md](file:///d:/rr/PLAY_RR_HACKATHON_SLIDE_DECK.md)  
+**PowerPoint Presentation (14 Slides):** [Play_RR_Hackathon_Lohithaswin_V.pptx](file:///d:/rr/Play_RR_Hackathon_Lohithaswin_V.pptx)  
+**Presentation PDF Export:** [Play_RR_Hackathon_Lohithaswin_V.pdf](file:///d:/rr/Play_RR_Hackathon_Lohithaswin_V.pdf)  
+**Formal Methodology Report (Word Document):** [Play_RR_Hackathon_Methodology_Report_Lohithaswin_V.docx](file:///d:/rr/Play_RR_Hackathon_Methodology_Report_Lohithaswin_V.docx)  
+**Formal Methodology Report (PDF):** [Play_RR_Hackathon_Methodology_Report_Lohithaswin_V.pdf](file:///d:/rr/Play_RR_Hackathon_Methodology_Report_Lohithaswin_V.pdf)  
+**Executive Slide Deck Document:** [PLAY_RR_HACKATHON_SLIDE_DECK.md](file:///d:/rr/PLAY_RR_HACKATHON_SLIDE_DECK.md)  
 **Live Published Web Dashboard:** [https://lohithaswin.github.io/play-rr-hackathon-2026/](https://lohithaswin.github.io/play-rr-hackathon-2026/)  
 **GitHub Repository:** [https://github.com/Lohithaswin/play-rr-hackathon-2026](https://github.com/Lohithaswin/play-rr-hackathon-2026)  
 **Local Interactive Dash Studio:** [http://127.0.0.1:8050](http://127.0.0.1:8050)  

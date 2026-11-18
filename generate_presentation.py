@@ -6,6 +6,7 @@ from pptx.util import Inches, Pt
 from pptx.dml.color import RGBColor
 from pptx.enum.text import PP_ALIGN
 from pptx.enum.shapes import MSO_SHAPE
+import win32com.client
 
 def build_presentation():
     prs = Presentation()
@@ -28,7 +29,6 @@ def build_presentation():
 
     def add_blank_slide():
         slide = prs.slides.add_slide(blank_layout)
-        # Background
         bg = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, 0, 0, Inches(13.333), Inches(7.5))
         bg.fill.solid()
         bg.fill.fore_color.rgb = BG_DARK
@@ -36,31 +36,27 @@ def build_presentation():
         return slide
 
     def add_header(slide, tag, title, subtitle):
-        # Header Box
         header_box = slide.shapes.add_textbox(Inches(0.8), Inches(0.4), Inches(11.733), Inches(1.1))
         tf = header_box.text_frame
         tf.word_wrap = True
         tf.margin_left = tf.margin_top = tf.margin_right = tf.margin_bottom = 0
 
-        # Tag
         p_tag = tf.paragraphs[0]
         p_tag.text = tag.upper()
         p_tag.font.size = Pt(10)
         p_tag.font.bold = True
         p_tag.font.color.rgb = RR_PINK
 
-        # Title
         p_title = tf.add_paragraph()
         p_title.text = title
-        p_title.font.size = Pt(22)
+        p_title.font.size = Pt(21)
         p_title.font.bold = True
         p_title.font.color.rgb = WHITE
         p_title.space_after = Pt(2)
 
-        # Subtitle
         p_sub = tf.add_paragraph()
         p_sub.text = subtitle
-        p_sub.font.size = Pt(11)
+        p_sub.font.size = Pt(10.5)
         p_sub.font.color.rgb = SUBTEXT
 
     def add_card(slide, left, top, width, height, title, body_lines, accent=RR_PINK):
@@ -70,13 +66,11 @@ def build_presentation():
         shape.line.color.rgb = CARD_BORDER
         shape.line.width = Pt(1)
 
-        # Top accent line
         line = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, Inches(left), Inches(top), Inches(width), Inches(0.06))
         line.fill.solid()
         line.fill.fore_color.rgb = accent
         line.line.fill.background()
 
-        # Text box
         tb = slide.shapes.add_textbox(Inches(left + 0.25), Inches(top + 0.15), Inches(width - 0.5), Inches(height - 0.3))
         tf = tb.text_frame
         tf.word_wrap = True
@@ -84,24 +78,23 @@ def build_presentation():
 
         p_t = tf.paragraphs[0]
         p_t.text = title.upper()
-        p_t.font.size = Pt(11)
+        p_t.font.size = Pt(10.5)
         p_t.font.bold = True
         p_t.font.color.rgb = accent
-        p_t.space_after = Pt(6)
+        p_t.space_after = Pt(5)
 
         for line_item in body_lines:
             p = tf.add_paragraph()
             p.text = line_item
-            p.font.size = Pt(10)
+            p.font.size = Pt(9.5)
             p.font.color.rgb = SUBTEXT
-            p.space_after = Pt(4)
+            p.space_after = Pt(3.5)
 
     # ─────────────────────────────────────────────────────────────────────────
     # SLIDE 1: TITLE SLIDE
     # ─────────────────────────────────────────────────────────────────────────
     s1 = add_blank_slide()
-    # Brand Pill
-    pill = s1.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(0.8), Inches(1.2), Inches(3.2), Inches(0.35))
+    pill = s1.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(0.8), Inches(1.1), Inches(3.4), Inches(0.35))
     pill.fill.solid()
     pill.fill.fore_color.rgb = RR_PINK
     pill.line.fill.background()
@@ -112,8 +105,7 @@ def build_presentation():
     p.font.bold = True
     p.font.color.rgb = WHITE
 
-    # Main Title
-    tb_title = s1.shapes.add_textbox(Inches(0.8), Inches(1.7), Inches(11.733), Inches(2.2))
+    tb_title = s1.shapes.add_textbox(Inches(0.8), Inches(1.6), Inches(11.733), Inches(2.2))
     tf1 = tb_title.text_frame
     tf1.word_wrap = True
     p1 = tf1.paragraphs[0]
@@ -128,8 +120,7 @@ def build_presentation():
     p2.font.size = Pt(16)
     p2.font.color.rgb = RR_GOLD
 
-    # Author Box
-    auth_card = s1.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(0.8), Inches(4.3), Inches(11.733), Inches(2.2))
+    auth_card = s1.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(0.8), Inches(4.3), Inches(11.733), Inches(2.3))
     auth_card.fill.solid()
     auth_card.fill.fore_color.rgb = CARD_BG
     auth_card.line.color.rgb = CARD_BORDER
@@ -140,13 +131,13 @@ def build_presentation():
     top_line.fill.fore_color.rgb = RR_PINK
     top_line.line.fill.background()
 
-    tb_auth = s1.shapes.add_textbox(Inches(1.2), Inches(4.6), Inches(11.0), Inches(1.6))
+    tb_auth = s1.shapes.add_textbox(Inches(1.2), Inches(4.55), Inches(11.0), Inches(1.8))
     tf_auth = tb_auth.text_frame
     tf_auth.word_wrap = True
 
     pa1 = tf_auth.paragraphs[0]
-    pa1.text = "OFFICIAL HACKATHON SUBMISSION"
-    pa1.font.size = Pt(11)
+    pa1.text = "OFFICIAL HACKATHON SUBMISSION  •  PLAY RR SEASON 2 (2026)"
+    pa1.font.size = Pt(10.5)
     pa1.font.bold = True
     pa1.font.color.rgb = RR_PINK
     pa1.space_after = Pt(4)
@@ -156,15 +147,22 @@ def build_presentation():
     pa2.font.size = Pt(18)
     pa2.font.bold = True
     pa2.font.color.rgb = WHITE
-    pa2.space_after = Pt(6)
+    pa2.space_after = Pt(4)
 
     pa3 = tf_auth.add_paragraph()
-    pa3.text = "COMPETITION: Play RR Hackathon Season 2 (2026)  •  DATASET SCOPE: 883 Matches | 190,811 Deliveries  •  TARGET: Rajasthan Royals Decision Sciences"
+    pa3.text = "TARGET: Rajasthan Royals Decision Sciences Group  •  SCOPE: 883 Matches | 190,811 Deliveries"
     pa3.font.size = Pt(11)
     pa3.font.color.rgb = SUBTEXT
+    pa3.space_after = Pt(4)
+
+    pa4 = tf_auth.add_paragraph()
+    pa4.text = "LIVE WEB APP: https://lohithaswin.github.io/play-rr-hackathon-2026/  •  GITHUB: Lohithaswin/play-rr-hackathon-2026"
+    pa4.font.size = Pt(10.5)
+    pa4.font.bold = True
+    pa4.font.color.rgb = RR_GOLD
 
     # ─────────────────────────────────────────────────────────────────────────
-    # SLIDE 2: THE CONTEXT BLINDNESS OF TRADITIONAL CRICKET METRICS
+    # SLIDE 2: THE CONTEXT BLINDNESS OF TRADITIONAL METRICS
     # ─────────────────────────────────────────────────────────────────────────
     s2 = add_blank_slide()
     add_header(s2, "Problem Statement & Strategic Imperative", "The Context Blindness of Traditional Cricket Metrics", "Why conventional batting averages, strike rates, and economy rates fail modern IPL franchise decision-making.")
@@ -205,10 +203,10 @@ def build_presentation():
         "Crisis or Finishing Mandate: Player must record either Death Chase WPA >= 1.0 or Crisis Rescue WPA >= 1.5 against elite opposition."
     ], RR_PINK)
 
-    add_card(s3, 8.93, 1.8, 3.6, 5.0, "Tier 3: Dynamic Ball-by-Ball Leverage", [
+    add_card(s3, 8.93, 1.8, 3.6, 5.0, "Tier 3: Dynamic Ball Leverage", [
         "Leverage Index (LI >= 1.50): Derivative of win probability isolating the top 15% high-volatility deliveries in cricket.",
         "Scoreboard Chase Pressure: Triggered in 2nd innings chases when RRR >= 10.0 RPO with fewer than 8 wickets in hand.",
-        "Crisis Collapse Windows: Powerplay Crisis (Overs 1-6 with >= 2 wickets lost) and Middle Overs Collapse (Overs 7-12 with >= 4 down)."
+        "Crisis Collapse Windows: Powerplay Crisis (Overs 1-6 with <= 2 wickets down) and Middle Overs Collapse (Overs 7-12 with >= 4 down)."
     ], RR_GOLD)
 
     # ─────────────────────────────────────────────────────────────────────────
@@ -229,7 +227,7 @@ def build_presentation():
         "Calculates exact expected runs conceded per ball to quantify true run value."
     ], RR_PINK)
 
-    add_card(s4, 6.8, 1.8, 5.7, 5.0, "Value Attribution & Strict Flaw Penalties", [
+    add_card(s4, 6.8, 1.8, 5.7, 5.0, "Value Attribution & Flaw Penalties", [
         "Performance Above Expectation:",
         "  • ML Runs Added (Batting) = Runs Scored - Expected Runs",
         "  • ML Runs Saved (Bowling) = Expected Runs - Bowler Runs Conceded",
@@ -241,7 +239,7 @@ def build_presentation():
     ], GREEN)
 
     # ─────────────────────────────────────────────────────────────────────────
-    # SLIDE 5: BATTING MODEL: MATCH-ON-THE-LINE FORMULA
+    # SLIDE 5: BATTING MODEL & ALLOCATION
     # ─────────────────────────────────────────────────────────────────────────
     s5 = add_blank_slide()
     add_header(s5, "Batting Formula & Allocation", "Batting Model: Match-on-the-Line Weighting Engine", "Prioritizing winning execution when the game is on the line, supported by a substantive specialist threshold.")
@@ -272,11 +270,9 @@ def build_presentation():
     s6 = add_blank_slide()
     add_header(s6, "Official Hackathon Results", "Official Final Top 10 Batters (Match on the Line)", "Ranked strictly by the Halla Bol Pressure Index (0-100 scale) with full factor transparency.")
 
-    # Table
     table_shape = s6.shapes.add_table(11, 10, Inches(0.8), Inches(1.8), Inches(11.733), Inches(5.0))
     table = table_shape.table
 
-    # Column widths
     col_widths = [Inches(0.8), Inches(2.2), Inches(0.9), Inches(1.1), Inches(1.1), Inches(1.2), Inches(1.2), Inches(1.1), Inches(1.0), Inches(1.133)]
     for idx, width in enumerate(col_widths):
         table.columns[idx].width = width
@@ -311,7 +307,7 @@ def build_presentation():
             cell = table.cell(row_idx + 1, col_idx)
             cell.fill.solid()
             if row_idx == 0:
-                cell.fill.fore_color.rgb = RGBColor(245, 197, 24) # Highlight #1 Gold
+                cell.fill.fore_color.rgb = RGBColor(245, 197, 24)
             elif row_idx % 2 == 1:
                 cell.fill.fore_color.rgb = RGBColor(15, 23, 42)
             else:
@@ -356,12 +352,33 @@ def build_presentation():
     ], RED)
 
     # ─────────────────────────────────────────────────────────────────────────
-    # SLIDE 8: BOWLING MODEL: MULTI-PHASE DEFENSIVE ALLOCATION
+    # SLIDE 8: VISUAL PROOF 1: BATTING PRESSURE QUADRANTS
     # ─────────────────────────────────────────────────────────────────────────
     s8 = add_blank_slide()
-    add_header(s8, "Bowling Architecture & Attribution", "Bowling Model: Multi-Phase Defensive Allocation", "Evaluating bowling craft across Powerplay, Middle Overs, and Death with strict run leakage penalties.")
+    add_header(s8, "Visual Empirical Evidence", "Visual Proof 1: Batting Pressure Archetypes & Quadrant Analysis", "Empirical scatter distribution of Crisis Rescue WPA vs High-Pressure ML Runs Added.")
 
-    add_card(s8, 0.8, 1.8, 5.7, 5.0, "Multi-Phase Runs Saved & Metrics", [
+    if os.path.exists("assets/visual_proofs_scatter.png"):
+        s8.shapes.add_picture("assets/visual_proofs_scatter.png", Inches(0.8), Inches(1.8), width=Inches(6.8))
+
+    add_card(s8, 7.8, 1.8, 4.733, 5.0, "Quadrant Analytical Insights", [
+        "Quadrant I: Elite All-Phase Match Winners",
+        "  • High ML Runs Added & High Collapse Resiliency.",
+        "  • Suryakumar Yadav (+234.4 ML Runs, +20.12 Rescue WPA), Heinrich Klaasen (+24.84 Rescue), and Tilak Varma (+21.46 Rescue) occupy this apex echelon.",
+        "Quadrant II: Front-Running Vulnerable",
+        "  • High raw runs but negative crisis collapse score.",
+        "  • Shubman Gill (-2.03 Rescue WPA) in red: fails to resurrect innings when wickets fall early, incurring a -15.3 pt deduction.",
+        "Quadrant IV: Pure Chase Closers",
+        "  • Specialized finishers taking over late chases.",
+        "  • David Miller (#1): Unrivaled +42.27 Counter-Attack WPA converting steep chases (RRR >= 10.0)."
+    ], RR_GOLD)
+
+    # ─────────────────────────────────────────────────────────────────────────
+    # SLIDE 9: BOWLING MODEL & PHASE ALLOCATION
+    # ─────────────────────────────────────────────────────────────────────────
+    s9 = add_blank_slide()
+    add_header(s9, "Bowling Architecture & Attribution", "Bowling Model: Multi-Phase Defensive Allocation", "Evaluating bowling craft across Powerplay, Middle Overs, and Death with strict run leakage penalties.")
+
+    add_card(s9, 0.8, 1.8, 5.7, 5.0, "Multi-Phase Runs Saved & Metrics", [
         "1. ML Runs Saved Across 3 Phases (30%):",
         "   Evaluated independently across Powerplay (1-6), Middle (7-15), and Death (16-20) against context par.",
         "2. Momentum-Breaking Dots (20%):",
@@ -374,7 +391,7 @@ def build_presentation():
         "   Win probability added and match consistency across appearances."
     ], RR_BLUE)
 
-    add_card(s8, 6.8, 1.8, 5.7, 5.0, "Phase Risk Penalties & Schedule Scaling", [
+    add_card(s9, 6.8, 1.8, 5.7, 5.0, "Phase Risk Penalties & Schedule Scaling", [
         "Non-Negotiable Death Overs Accountability:",
         "  • Death bowling is non-negotiable in T20 cricket. Conceding runs above expectation in overs 16-20 directly loses games.",
         "  • Death Run Leakage Penalty = |Death Runs Conceded Above Par| * 0.80.",
@@ -385,13 +402,12 @@ def build_presentation():
     ], GREEN)
 
     # ─────────────────────────────────────────────────────────────────────────
-    # SLIDE 9: OFFICIAL TOP 10 BOWLERS TABLE
+    # SLIDE 10: OFFICIAL TOP 10 BOWLERS TABLE
     # ─────────────────────────────────────────────────────────────────────────
-    s9 = add_blank_slide()
-    add_header(s9, "Official Hackathon Results", "Official Final Top 10 Bowlers (Multi-Phase Defense)", "Ranked strictly by the Halla Bol Pressure Index (0-100 scale) with complete phase accountability.")
+    s10 = add_blank_slide()
+    add_header(s10, "Official Hackathon Results", "Official Final Top 10 Bowlers (Multi-Phase Defense)", "Ranked strictly by the Halla Bol Pressure Index (0-100 scale) with complete phase accountability.")
 
-    # Table
-    table_shape2 = s9.shapes.add_table(11, 10, Inches(0.8), Inches(1.8), Inches(11.733), Inches(5.0))
+    table_shape2 = s10.shapes.add_table(11, 10, Inches(0.8), Inches(1.8), Inches(11.733), Inches(5.0))
     table2 = table_shape2.table
 
     col_widths2 = [Inches(0.8), Inches(2.2), Inches(0.9), Inches(1.0), Inches(1.1), Inches(1.1), Inches(1.2), Inches(1.1), Inches(1.1), Inches(1.233)]
@@ -428,7 +444,7 @@ def build_presentation():
             cell = table2.cell(row_idx + 1, col_idx)
             cell.fill.solid()
             if row_idx == 0:
-                cell.fill.fore_color.rgb = RGBColor(245, 197, 24) # Highlight #1 Gold
+                cell.fill.fore_color.rgb = RGBColor(245, 197, 24)
             elif row_idx % 2 == 1:
                 cell.fill.fore_color.rgb = RGBColor(15, 23, 42)
             else:
@@ -442,12 +458,12 @@ def build_presentation():
             p.font.color.rgb = RGBColor(7, 10, 19) if row_idx == 0 else WHITE
 
     # ─────────────────────────────────────────────────────────────────────────
-    # SLIDE 10: BOWLING FORENSIC DEEP DIVES
+    # SLIDE 11: BOWLING FORENSIC DEEP DIVES
     # ─────────────────────────────────────────────────────────────────────────
-    s10 = add_blank_slide()
-    add_header(s10, "Forensic Case Studies", "Bowling Deep Dives: King of Pace & King of Spin", "Concrete match proofs showing Bumrah's dominance, Narine vs Varun, and death overs risk.")
+    s11 = add_blank_slide()
+    add_header(s11, "Forensic Case Studies", "Bowling Deep Dives: King of Pace & King of Spin", "Concrete match proofs showing Bumrah's dominance, Narine vs Varun, and death overs risk.")
 
-    add_card(s10, 0.8, 1.8, 3.6, 5.0, "Jasprit Bumrah (#1 — 78.5 pts)", [
+    add_card(s11, 0.8, 1.8, 3.6, 5.0, "Jasprit Bumrah (#1 — 78.5 pts)", [
         "Undisputed King of Pace",
         "• +149.8 runs saved above par at the death (more than double all competitors).",
         "• 7.36 pressure economy rate with 64.4% consistency and zero deductions.",
@@ -456,7 +472,7 @@ def build_presentation():
         "  [2024-03-24] vs GT: 3/15 (24b, Eco: 4.36, +3.13 WPA)."
     ], RR_GOLD)
 
-    add_card(s10, 4.86, 1.8, 3.6, 5.0, "Sunil Narine (#2 — 52.4 pts)", [
+    add_card(s11, 4.86, 1.8, 3.6, 5.0, "Sunil Narine (#2 — 52.4 pts)", [
         "Undisputed King of Spin",
         "• Flawless across all 3 phases: +20.2 PP, +80.2 Mid, and +23.6 Death runs saved.",
         "• Faced 100% Tier-1 elite opposition (0.0% minnows) with 0.00 deductions.",
@@ -465,7 +481,7 @@ def build_presentation():
         "  • Narine beats Varun decisively by 13.8 pts."
     ], RR_PINK)
 
-    add_card(s10, 8.93, 1.8, 3.6, 5.0, "Phase Risk Penalties (Siraj & Bishnoi)", [
+    add_card(s11, 8.93, 1.8, 3.6, 5.0, "Phase Risk Penalties (Siraj & Bishnoi)", [
         "Fatal Death Leakage Demotions",
         "• Mohammed Siraj (#19, 30.2 pts): Leaked -20.99 runs above expected at the death at an 8.98 RPO, taking a -16.8 pt deduction.",
         "• Ravi Bishnoi (#51, 15.4 pts): Elite in middle overs (+64.7) but leaked -41.78 runs at the death (10.42 RPO), taking a -33.4 pt deduction.",
@@ -473,12 +489,30 @@ def build_presentation():
     ], RED)
 
     # ─────────────────────────────────────────────────────────────────────────
-    # SLIDE 11: STRATEGIC INSIGHTS & AUCTION BLUEPRINT FOR RR
+    # SLIDE 12: VISUAL PROOF 2 & 3: MULTI-PHASE MATRIX & SCHEDULE CALIBRATION
     # ─────────────────────────────────────────────────────────────────────────
-    s11 = add_blank_slide()
-    add_header(s11, "Franchise Decision Sciences", "Strategic Insights & Auction Blueprint for Rajasthan Royals", "Actionable recommendations for squad building, auction targets, and role deployment.")
+    s12 = add_blank_slide()
+    add_header(s12, "Visual Empirical Evidence", "Visual Proof 2 & 3: Multi-Phase Matrix & Schedule Calibration", "Empirical validation of Bowling Runs Saved by phase and Associate Minnow Exposure.")
 
-    add_card(s11, 0.8, 1.8, 3.6, 5.0, "1. Core Retention Validation", [
+    if os.path.exists("assets/schedule_calibration.png"):
+        s12.shapes.add_picture("assets/schedule_calibration.png", Inches(0.8), Inches(1.8), width=Inches(6.8))
+
+    add_card(s12, 7.8, 1.8, 4.733, 5.0, "Key Empirical Discoveries", [
+        "Multi-Phase Defensive Allocation",
+        "  • Jasprit Bumrah's death-phase bar is completely unmatched (+149.8 runs saved), dwarfing the rest of the cohort.",
+        "  • Varun Chakravarthy's death bar extends into negative red (-9.61), confirming his tactical death-phase vulnerability.",
+        "Schedule Strength Calibration",
+        "  • Mustafizur Rahman's 20.7% associate minnow delivery volume is discounted by 0.40x, adjusting his rank from #2 to #4.",
+        "  • Sunil Narine and Josh Hazlewood faced 0.0% minnows, guaranteeing their top podium standing."
+    ], RR_BLUE)
+
+    # ─────────────────────────────────────────────────────────────────────────
+    # SLIDE 13: STRATEGIC INSIGHTS & AUCTION BLUEPRINT FOR RR
+    # ─────────────────────────────────────────────────────────────────────────
+    s13 = add_blank_slide()
+    add_header(s13, "Franchise Decision Sciences", "Strategic Insights & Auction Blueprint for Rajasthan Royals", "Actionable recommendations for squad building, auction targets, and role deployment.")
+
+    add_card(s13, 0.8, 1.8, 3.6, 5.0, "1. Core Retention Validation", [
         "Shimron Hetmyer (#6 Batter, 59.0 pts):",
         "  • Confirmed as an elite clutch closer (+21.95 CA WPA, +16.96 Rescue WPA, +10.20 Death WPA).",
         "  • Retaining Hetmyer guarantees proven execution when RRR >= 12.0.",
@@ -487,7 +521,7 @@ def build_presentation():
         "  • Validated as an elite domestic death-overs stabilizer."
     ], RR_PINK)
 
-    add_card(s11, 4.86, 1.8, 3.6, 5.0, "2. High-Value Auction Targets", [
+    add_card(s13, 4.86, 1.8, 3.6, 5.0, "2. High-Value Auction Targets", [
         "Nathan Ellis (#5 Bowler, 44.0 pts):",
         "  • Saves +41.5 death runs and +32.6 middle runs against 100% elite competition with zero deductions.",
         "Heinrich Klaasen (#4 Batter, 61.6 pts):",
@@ -496,7 +530,7 @@ def build_presentation():
         "  • Elite crisis anchor with +21.46 Rescue WPA and 7 Authentic MWPPs."
     ], RR_GOLD)
 
-    add_card(s11, 8.93, 1.8, 3.6, 5.0, "3. Tactical Deployment Rules", [
+    add_card(s13, 8.93, 1.8, 3.6, 5.0, "3. Tactical Deployment Rules", [
         "Death Phase Risk Mandate:",
         "  • Never entrust the 18th-20th overs to bowlers with negative death par metrics (e.g. Siraj, Bishnoi, Varun).",
         "Anchoring Balance in Chases:",
@@ -504,31 +538,33 @@ def build_presentation():
     ], GREEN)
 
     # ─────────────────────────────────────────────────────────────────────────
-    # SLIDE 12: PRODUCTION STUDIO & REPOSITORY ARCHITECTURE
+    # SLIDE 14: PRODUCTION STUDIO & REPOSITORY ARCHITECTURE
     # ─────────────────────────────────────────────────────────────────────────
-    s12 = add_blank_slide()
-    add_header(s12, "Software Deliverables & Verification", "Production Studio & Repository Architecture", "Enterprise-grade Dash dashboard and reproducible datasets delivered for the Rajasthan Royals.")
+    s14 = add_blank_slide()
+    add_header(s14, "Software Deliverables & Verification", "Production Studio & Repository Architecture", "Enterprise-grade Dash dashboard and reproducible datasets delivered for the Rajasthan Royals.")
 
-    add_card(s12, 0.8, 1.8, 5.7, 5.0, "Live Interactive Analytics Studio", [
+    add_card(s14, 0.8, 1.8, 5.7, 5.0, "Live Interactive Analytics Studio", [
         "Dashboard Architecture (Python Dash + Plotly Web App):",
         "  • Live Online Dashboard: https://lohithaswin.github.io/play-rr-hackathon-2026/",
         "  • GitHub Repository: https://github.com/Lohithaswin/play-rr-hackathon-2026",
         "  • Local Dash Studio: http://127.0.0.1:8050",
         "  • Tab 1: Leaderboards & Multi-Phase Audit",
         "  • Tab 2: Visual Proofs & Forensic Player Evidence Dossiers",
-        "  • Tab 3: Analytical Case Studies (5 Core Franchise Debates)",
-        "  • Tab 4: Mathematical Architecture & Pressure Methodology",
+        "  • Tab 3: How Each Player Reached Top 10 (Deep Dives)",
+        "  • Tab 4: Analytical Case Studies (5 Core Franchise Debates)",
+        "  • Tab 5: Mathematical Architecture & Pressure Methodology",
         "Completely sanitized UI with clean typography, institutional Rajasthan Royals branding, and zero extraneous emojis."
     ], RR_PINK)
 
-    add_card(s12, 6.8, 1.8, 5.7, 5.0, "Reproducible Data Deliverables", [
+    add_card(s14, 6.8, 1.8, 5.7, 5.0, "Reproducible Data Deliverables", [
         "Transparent Files on Disk (d:\\rr):",
         "  • bat_rankings_final.parquet & bat_final_transparent.csv",
         "  • bowl_rankings_final.parquet & bowl_final_transparent.csv",
         "  • bat_hp_match_logs.parquet & bowl_hp_match_logs.parquet",
         "  • player_hp_summary.txt (Full inning-by-inning audit log)",
-        "  • PLAY_RR_HACKATHON_SUBMISSION.md (Comprehensive whitepaper)",
-        "  • Play_RR_Hackathon_Lohithaswin_V.pptx (Executive Slide Deck)",
+        "  • Play_RR_Hackathon_Methodology_Report_Lohithaswin_V.docx",
+        "  • Play_RR_Hackathon_Methodology_Report_Lohithaswin_V.pdf",
+        "  • Play_RR_Hackathon_Lohithaswin_V.pptx & .pdf",
         "Lead Submitter: LOHITHASWIN V"
     ], RR_BLUE)
 
@@ -536,6 +572,18 @@ def build_presentation():
     output_path = 'd:/rr/Play_RR_Hackathon_Lohithaswin_V.pptx'
     prs.save(output_path)
     print(f"Successfully generated PowerPoint presentation at: {output_path}")
+
+    # Export to PDF via PowerPoint COM
+    pdf_output = 'd:/rr/Play_RR_Hackathon_Lohithaswin_V.pdf'
+    try:
+        powerpoint = win32com.client.Dispatch("PowerPoint.Application")
+        ppt = powerpoint.Presentations.Open(os.path.abspath(output_path), WithWindow=False)
+        ppt.SaveAs(os.path.abspath(pdf_output), 32) # 32 = ppSaveAsPDF
+        ppt.Close()
+        powerpoint.Quit()
+        print(f"Successfully converted PowerPoint presentation to PDF at: {pdf_output}")
+    except Exception as e:
+        print("PowerPoint PDF conversion error:", e)
 
 if __name__ == '__main__':
     build_presentation()
