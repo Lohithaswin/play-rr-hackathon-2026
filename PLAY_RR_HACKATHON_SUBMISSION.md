@@ -45,10 +45,8 @@ Traditional cricket metrics (Batting Average, Strike Rate, Economy Rate) are fun
 | **#9** | **Nicholas Pooran** | 100 | 1938 | **74.5% (World #1)**| 11 Wins (5 MWPPs) | +25.49 | +6.29 | +1.91 | **0.00** | **46.2** |
 | **#10** | **Venkatesh Iyer** | 51 | 942 | 66.7% | 7 Wins (7 MWPPs) | +23.56 | +3.71 | +0.48 | **0.00** | **45.4** |
 
-*Immediate Reserves & Analytical Filter Exclusions:*
+*Demotions & Analytical Filter Exclusions:*
 - **#11 Shubman Gill (43.4 pts):** Demoted outside the Top 10 due to failing in crisis collapses ($-2.03$ WPA), taking an explicit **$-15.3$ pt flaw deduction** ($7.5\times$ non-compensatory penalty).
-- **#12 Phil Salt (42.1 pts):** +40.25 Counter-Attack WPA, but lower multi-phase rescue versatility.
-- **#13 Sanju Samson (41.7 pts):** +23.12 Counter-Attack WPA, 7 Authentic MWPPs, 11 crucible wins.
 - **Filtered — Bowler Archetype (Rashid Khan, 506 balls):** Properly categorized in his primary craft as the World #7 bowler (39.7 pts); eliminated from specialist batting ranks.
 - **Filtered — Low Match-on-the-Line Impact (Cameron Green, 1,068 balls):** While possessing a high general strike rate, generated only +11.8 Counter-Attack WPA and lower high-pressure win conversion, placing him outside the match-winning top tier.
 - **Filtered — Sub-Threshold Cameo (Dinesh Karthik, 637 balls):** Averaged 10.4 balls per innings and recorded 0.0 Death-Alive WPA, failing the $\ge 750$ balls specialist threshold.

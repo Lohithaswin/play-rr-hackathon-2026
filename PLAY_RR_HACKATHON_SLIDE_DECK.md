@@ -223,20 +223,31 @@ $$\text{Batting Clutch Score} = \left( \sum W_i \cdot S_i \right) \cdot \text{Re
 
 ---
 
-## SLIDE 13: STRATEGIC INSIGHTS & AUCTION BLUEPRINT FOR RAJASTHAN ROYALS
+## SLIDE 13: HACKATHON METHODOLOGY, PRESSURE DEFINITIONS & RANKING JUSTIFICATION
 
-### 1. Core Retention Validation
-- **Shimron Hetmyer (#6 Batter, 59.0 pts):** Confirmed as an elite clutch closer (+21.95 CA WPA, +16.96 Rescue WPA, +10.20 Death WPA). Retaining Hetmyer guarantees proven execution when $RRR \ge 12.0$.
-- **Sandeep Sharma (#12 Bowler, 35.5 pts):** 70.0% pressure consistency rate with 0.0 deductions over 43 matches. Validated as an elite domestic death-overs stabilizer.
+### 1. Operational Definition of Match Pressure Situations
+- **Scoreboard Chase Crucible:** 2nd innings run chases where Required Run Rate (RRR) $\ge 10.0$ RPO with $\le 7$ wickets in hand. Every single ball directly influences win probability.
+- **Early Top-Order Collapses (Crisis Windows):** Innings states where $\ge 2$ wickets fall in Powerplay (Overs 1–6) or $\ge 4$ wickets fall before Over 12. Demands stabilizing the run rate while preventing all-out collapse.
+- **Crucible Death Overs:** Overs 16–20 where match victory margin is $\le 36$ runs. Extreme win-probability volatility.
+- **Dynamic Leverage Index ($LI \ge 1.50$):** Isolates top 15% high-volatility deliveries derived from ball-by-ball win probability gradients.
 
-### 2. High-Value Auction Targets
-- **Nathan Ellis (#5 Bowler, 44.0 pts):** Exceptional multi-phase fast bowler (+41.5 death, +32.6 mid) with 0.0 deductions against 100% elite competition.
-- **Heinrich Klaasen (#4 Batter, 61.6 pts):** World #1 in Crisis Rescue (+24.84 WPA); completely neutralizes middle-overs spin.
-- **Tilak Varma (#3 Batter, 63.7 pts):** Elite young anchor with +21.46 Rescue WPA and 7 Authentic MWPPs.
+### 2. Mathematical Methodology & Par Valuation
+- **XGBoost Par Engine:** 18 context features (ground par, balls left, wickets in hand, RRR, matchups) predicting delivery-level par runs.
+- **Performance Above Expectation:** $\text{ML Runs Added} = \text{Actual} - \text{Expected}$; $\text{ML Runs Saved} = \text{Expected} - \text{Conceded}$.
+- **Non-Compensatory Flaw Accountability:** Fatal liabilities trigger mandatory deductions that cannot be redeemed by front-running volume:
+  - Death runs leaked: $|\text{Runs}| \times 0.80$
+  - Negative collapse rescue: $|WPA| \times 7.50$
+- **Specialist Volume Thresholds:** $\ge 750$ career balls for specialist batters; $\ge 40$ matches for bowlers.
 
-### 3. Tactical Deployment Rules
-- **Death Phase Risk Mandate:** Never entrust the 18th–20th overs to bowlers with negative death par metrics (e.g. Siraj, Bishnoi, Varun).
-- **Chase Composition Rule:** Pair explosive finishers (Miller, Hetmyer) with high-consistency anchors (Pooran 74.5%, Kohli 69.1%) to maximize target conversion.
+### 3. Objective Justification of Final Rankings
+- **Batting Ranks:**
+  - **David Miller (#1, 80.2 pts):** Leads global cricket in Counter-Attack WPA (+42.27), Death WPA (+17.65), and 8 Authentic MWPPs with 0 flaw deductions.
+  - **Suryakumar Yadav (#2, 74.0 pts):** World leader in high-pressure team victories (20 wins) and volume (+234.4 ML runs added).
+  - **Shubman Gill (#11, 43.4 pts):** Demoted out of Top 10 due to failing in early collapses ($-2.03$ Crisis Rescue WPA, $-15.3$ pt deduction).
+- **Bowling Ranks:**
+  - **Jasprit Bumrah (#1, 78.5 pts):** Apex bowler saving $+149.8$ runs above par at the death with an elite 7.36 pressure economy and 0 deductions.
+  - **Sunil Narine (#2, 52.4 pts):** Wins the spin crown by saving runs across all 3 phases (+20.2 PP, +80.2 Mid, +23.6 Death) against 100% elite competition.
+  - **Varun Chakravarthy (#9, 38.6 pts):** Penalized $-7.69$ pts for $-9.61$ death-overs leakage.
 
 ---
 

@@ -507,34 +507,44 @@ def build_presentation():
     ], RR_BLUE)
 
     # ─────────────────────────────────────────────────────────────────────────
-    # SLIDE 13: STRATEGIC INSIGHTS & AUCTION BLUEPRINT FOR RR
+    # SLIDE 13: HACKATHON METHODOLOGY & PRESSURE JUSTIFICATION
     # ─────────────────────────────────────────────────────────────────────────
     s13 = add_blank_slide()
-    add_header(s13, "Franchise Decision Sciences", "Strategic Insights & Auction Blueprint for Rajasthan Royals", "Actionable recommendations for squad building, auction targets, and role deployment.")
+    add_header(s13, "Hackathon Methodology & Framework", "Pressure Situation Definitions & Ranking Justification", "Synthesizing the core hackathon requirements: defining match leverage, mathematical formulation, and ranking justification.")
 
-    add_card(s13, 0.8, 1.8, 3.6, 5.0, "1. Core Retention Validation", [
-        "Shimron Hetmyer (#6 Batter, 59.0 pts):",
-        "  • Confirmed as an elite clutch closer (+21.95 CA WPA, +16.96 Rescue WPA, +10.20 Death WPA).",
-        "  • Retaining Hetmyer guarantees proven execution when RRR >= 12.0.",
-        "Sandeep Sharma (#12 Bowler, 35.5 pts):",
-        "  • 70.0% pressure consistency rate with 0.0 deductions over 43 matches.",
-        "  • Validated as an elite domestic death-overs stabilizer."
+    add_card(s13, 0.8, 1.8, 3.6, 5.0, "1. Pressure Situations Defined", [
+        "Scoreboard Chase Crucible:",
+        "  • 2nd Innings Target Pressure when Required Run Rate >= 10.0 RPO with <= 7 wickets in hand.",
+        "Early Top-Order Collapses:",
+        "  • Powerplay Crisis: Overs 1-6 with <= 2 wickets in hand (saving team from match-losing powerplay chokes).",
+        "  • Middle Overs Crisis: Overs 7-12 with >= 4 down.",
+        "Crucible Death Overs:",
+        "  • Overs 16-20 with match victory margin <= 36 runs.",
+        "Dynamic Leverage Index:",
+        "  • Evaluates top 15% volatile deliveries where Win Probability volatility LI >= 1.50."
     ], RR_PINK)
 
-    add_card(s13, 4.86, 1.8, 3.6, 5.0, "2. High-Value Auction Targets", [
-        "Nathan Ellis (#5 Bowler, 44.0 pts):",
-        "  • Saves +41.5 death runs and +32.6 middle runs against 100% elite competition with zero deductions.",
-        "Heinrich Klaasen (#4 Batter, 61.6 pts):",
-        "  • World #1 in Crisis Rescue (+24.84 WPA); dismantles middle-overs spin.",
-        "Tilak Varma (#3 Batter, 63.7 pts):",
-        "  • Elite crisis anchor with +21.46 Rescue WPA and 7 Authentic MWPPs."
+    add_card(s13, 4.86, 1.8, 3.6, 5.0, "2. Mathematical Formulation", [
+        "XGBoost Expected Par Engine:",
+        "  • 18 features (ground par, overs left, wickets down, RRR, match-ups) predicting expected runs per ball.",
+        "  • ML Runs Added/Saved = Actual - Expected.",
+        "Non-Compensatory Flaw Penalties:",
+        "  • Severe liabilities trigger explicit deductions:",
+        "  • Bowler Death Run Leakage: |Runs Conceded Above Par| * 0.80.",
+        "  • Batter Negative Collapse Rescue: |Rescue WPA| * 7.50.",
+        "Substantive Sample Thresholds:",
+        "  • Specialist Batting: >= 750 career balls.",
+        "  • Bowling Consistency: >= 40 match appearances."
     ], RR_GOLD)
 
-    add_card(s13, 8.93, 1.8, 3.6, 5.0, "3. Tactical Deployment Rules", [
-        "Death Phase Risk Mandate:",
-        "  • Never entrust the 18th-20th overs to bowlers with negative death par metrics (e.g. Siraj, Bishnoi, Varun).",
-        "Anchoring Balance in Chases:",
-        "  • Pair explosive finishers (Miller, Hetmyer) with high-consistency anchors (Pooran 74.5%, Kohli 69.1%) to maximize win conversion."
+    add_card(s13, 8.93, 1.8, 3.6, 5.0, "3. Ranking Justification", [
+        "Batting Apex Justification:",
+        "  • David Miller (#1): Leads world in Counter-Attack WPA (+42.27), Death WPA (+17.65), and 8 MWPPs with 0 flaw deductions.",
+        "  • Suryakumar Yadav (#2): World leader in High-Pressure Wins (20) & ML Runs (+234.4).",
+        "  • Shubman Gill (#11): Demoted out of Top 10 (-15.3 pt penalty) due to negative collapse rescue (-2.03 WPA).",
+        "Bowling Apex Justification:",
+        "  • Jasprit Bumrah (#1): Undisputed King of Death (+149.8 runs saved, 7.36 eco, 0 deductions).",
+        "  • Sunil Narine (#2): Positive runs saved across all 3 phases (+124.0 total) vs 100% elite competition."
     ], GREEN)
 
     # ─────────────────────────────────────────────────────────────────────────

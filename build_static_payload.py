@@ -26,7 +26,8 @@ bowl_logs = pd.read_parquet('bowl_hp_match_logs.parquet')
 
 bat10 = bat_rank.head(10).reset_index(drop=True)
 bowl10 = bowl_rank.head(10).reset_index(drop=True)
-bat12 = bat_rank.head(12).reset_index(drop=True)
+# Only Top 10 + Shubman Gill (#11 for Quadrant II collapse failure contrast) - NO Phil Salt
+bat_scatter = bat_rank[bat_rank['rank_bat'] <= 11].reset_index(drop=True)
 
 # ─────────────────────────────────────────────────────────────────────────────
 # EXHAUSTIVE TOP 10 QUALIFYING EXPLANATIONS (WHY THEY GOT IN)
@@ -357,13 +358,31 @@ def create_horizontal_bar(df10, name_col, score_col, bar_color, title):
 fig_bat10 = create_horizontal_bar(bat10, 'striker_name', 'batting_clutch_score', RR_PINK, 'Top 10 Batters Under High-Leverage Pressure')
 fig_bowl10 = create_horizontal_bar(bowl10, 'bowler_name', 'bowling_clutch_score', RR_BLUE, 'Top 10 Bowlers Under High-Leverage Pressure')
 
-# SCATTER CHART WITH EXPLICIT LISTS & QUADRANT ANNOTATIONS
-scatter_x = [float(v) for v in bat12['rescue_wpa']]
-scatter_y = [float(v) for v in bat12['hp_ml_runs_added']]
-scatter_names = list(bat12['striker_name'])
-scatter_ca = [float(v) for v in bat12['ca_wpa']]
-scatter_colors = [RR_GOLD if r['rank_bat'] <= 3 else (RED if r['striker_name'] == 'Shubman Gill' else RR_PINK) for _, r in bat12.iterrows()]
-scatter_sizes = [float(max(14, abs(w) * 0.95)) for w in scatter_ca]
+# SCATTER CHART WITH EXPLICIT LISTS & QUADRANT ANNOTATIONS (EXCLUSIVELY TOP 10 + GILL CONTRAST)
+scatter_x = [float(v) for v in bat_scatter['rescue_wpa']]
+scatter_y = [float(v) for v in bat_scatter['hp_ml_runs_added']]
+scatter_names = list(bat_scatter['striker_name'])
+scatter_ca = [float(v) for v in bat_scatter['ca_wpa']]
+scatter_colors = [RR_GOLD if r['rank_bat'] <= 3 else (RED if r['striker_name'] == 'Shubman Gill' else RR_PINK) for _, r in bat_scatter.iterrows()]
+scatter_sizes = [float(max(15, abs(w) * 0.95)) for w in scatter_ca]
+
+# Text positioning to avoid collisions
+text_positions = []
+for name, y, x in zip(scatter_names, scatter_y, scatter_x):
+    if 'Miller' in name:
+        text_positions.append('bottom center')
+    elif 'Suryakumar' in name:
+        text_positions.append('top center')
+    elif 'Klaasen' in name:
+        text_positions.append('top left')
+    elif 'Tilak' in name:
+        text_positions.append('bottom right')
+    elif 'Gill' in name:
+        text_positions.append('top center')
+    elif y >= 40:
+        text_positions.append('top right')
+    else:
+        text_positions.append('bottom right')
 
 scatter_fig = go.Figure()
 scatter_fig.add_trace(go.Scatter(
@@ -371,7 +390,7 @@ scatter_fig.add_trace(go.Scatter(
     y=scatter_y,
     mode='markers+text',
     text=scatter_names,
-    textposition=['top right' if y >= 50 else 'bottom right' for y in scatter_y],
+    textposition=text_positions,
     textfont=dict(color='#ffffff', size=11, family='Inter'),
     marker=dict(
         size=scatter_sizes,
@@ -383,13 +402,13 @@ scatter_fig.add_trace(go.Scatter(
 ))
 
 # Threshold Lines & Quadrants
-scatter_fig.add_vline(x=0, line_dash="dash", line_color="rgba(244, 63, 94, 0.6)", line_width=2)
+scatter_fig.add_vline(x=0, line_dash="dash", line_color="rgba(244, 63, 94, 0.7)", line_width=2)
 scatter_fig.add_hline(y=0, line_dash="dot", line_color="rgba(255, 255, 255, 0.2)", line_width=1)
 
-# Quadrant Annotation Badges
-scatter_fig.add_annotation(x=18, y=210, text="<b>QUADRANT I: ELITE ALL-PHASE MATCH WINNERS</b><br>(Surya, Klaasen, Tilak)", showarrow=False, font=dict(color=RR_GOLD, size=10), bgcolor="rgba(15, 23, 42, 0.8)", bordercolor=RR_GOLD, borderpad=4)
-scatter_fig.add_annotation(x=-1.5, y=140, text="<b>QUADRANT II: FRONT-RUNNING VULNERABLE</b><br>(Gill: Fails in Early Collapse)", showarrow=False, font=dict(color=RED, size=10), bgcolor="rgba(15, 23, 42, 0.8)", bordercolor=RED, borderpad=4)
-scatter_fig.add_annotation(x=16, y=-50, text="<b>QUADRANT IV: PURE CHASE CLOSERS</b><br>(Miller: World #1 Chase Finisher)", showarrow=False, font=dict(color=LIGHT_BLUE, size=10), bgcolor="rgba(15, 23, 42, 0.8)", bordercolor=LIGHT_BLUE, borderpad=4)
+# Quadrant Annotation Badges placed cleanly in open corners
+scatter_fig.add_annotation(x=20, y=245, text="<b>QUADRANT I: ELITE ALL-PHASE MATCH WINNERS</b><br>(Surya, Klaasen, Tilak)", showarrow=False, font=dict(color=RR_GOLD, size=9.5), bgcolor="rgba(15, 23, 42, 0.85)", bordercolor=RR_GOLD, borderpad=4)
+scatter_fig.add_annotation(x=-2.5, y=230, text="<b>QUADRANT II: FRONT-RUNNING VULNERABLE</b><br>(Gill: Fails in Early Collapse)", showarrow=False, font=dict(color=RED, size=9.5), bgcolor="rgba(15, 23, 42, 0.85)", bordercolor=RED, borderpad=4)
+scatter_fig.add_annotation(x=21, y=-75, text="<b>QUADRANT IV: PURE CHASE CLOSERS</b><br>(Miller: World #1 Chase Finisher)", showarrow=False, font=dict(color=LIGHT_BLUE, size=9.5), bgcolor="rgba(15, 23, 42, 0.85)", bordercolor=LIGHT_BLUE, borderpad=4)
 
 scatter_fig.update_layout(
     title=dict(text='<b>Visual Proof 1: Batting Pressure Archetypes</b> (Crisis Rescue WPA vs High-Pressure ML Runs Added)', font=dict(color=TEXT, size=13)),
@@ -409,7 +428,7 @@ scatter_fig.update_layout(
         gridcolor='rgba(255,255,255,0.05)',
         zeroline=True,
         zerolinecolor='rgba(255,255,255,0.2)',
-        range=[-100, 260]
+        range=[-100, 270]
     ),
     height=400
 )
@@ -462,7 +481,7 @@ minnow_fig.update_layout(
 # BATTERS & BOWLERS DOSSIER DATA
 # ─────────────────────────────────────────────────────────────────────────────
 batters_data = {}
-for _, br in bat12.iterrows():
+for _, br in bat_scatter.iterrows():
     name = br['striker_name']
     exp = TOP10_BAT_EXPLANATIONS.get(name, {
         'rank': int(br['rank_bat']),
